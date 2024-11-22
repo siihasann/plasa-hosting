@@ -298,7 +298,7 @@ body {
   .hero-image img {
     max-width: 100%;
     height: auto;
-    margin-top: 5rem;
+    margin-top: 7rem;
     border-radius: 10px;
     animation: float 3s infinite ease-in-out;
   }
