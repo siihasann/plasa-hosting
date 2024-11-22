@@ -287,3 +287,46 @@ accordions.forEach(accordion => {
         body.style.display = body.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+// START FAQ
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+    
+            // Close all answers
+            document.querySelectorAll('.faq-answer').forEach(a => {
+                a.classList.remove('active');
+            });
+    
+            // Toggle clicked answer
+            if (!isActive) {
+                answer.classList.add('active');
+            }
+    
+            // Rotate arrow icon
+            question.querySelector('svg').style.transform = 
+                isActive ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+    });
+    
+    // Animate sections on scroll
+    const observerfax = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    ['.faq-section', '.footer'].forEach(selector => {
+        const element = document.querySelector(selector);
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'all 0.6s ease';
+        observerfax.observe(element);
+    });
