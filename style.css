@@ -296,7 +296,7 @@ body {
   }
   
   .hero-image img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
     margin-top: 5rem;
     border-radius: 10px;
@@ -376,7 +376,7 @@ body {
       }
   
     .hero-image img {
-      width: 100%;
+      width: 65%;
       margin-top: 1rem;
     }
     .hero-description {
