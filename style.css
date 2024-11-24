@@ -296,7 +296,9 @@ body {
   .hero-button:hover {
     background-color: var(--success-dark);
   }
+
   
+
   .hero-image img {
     max-width: 100%;
     height: auto;
@@ -316,6 +318,7 @@ body {
       transform: translateX(0);
     }
   }
+ 
   
   @keyframes float {
     0%, 100% {

@@ -37,3 +37,24 @@ document.querySelector(".button-fitur").onclick = () => {
   }
 };
 // end modal-fitur
+
+// ANIMATION ON SCROL IN PACKAGES
+
+const cards = document.querySelectorAll(".card-package");
+
+const observerOptions = {
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-in");
+    }
+  });
+}, observerOptions);
+
+cards.forEach((card) => {
+   card.classList.add("animate-init");
+  observer.observe(card);
+});

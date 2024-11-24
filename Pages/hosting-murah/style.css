@@ -215,6 +215,16 @@ body {
 /* end navbar */
 
 /* START HERO SECTION */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 .hero-section {
   width: 100%;
@@ -235,6 +245,7 @@ body {
   gap: 30px;
   flex-direction: column;
   width: 50%;
+  animation: fadeInLeft 1s ease-in-out;
 }
 .hero-text .title-description h1 {
   color: #0389ff;
@@ -272,11 +283,37 @@ body {
   font-size: 14px;
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-section .hero-image {
+  animation: fadeInRight 1s ease-in-out;
+}
 .hero-section .hero-image img {
   width: auto;
   height: 503px;
   background-size: auto;
 }
+
 /* RESPONSIVE TABLET */
 @media (max-width: 967px) {
   .hero-section {
@@ -436,6 +473,19 @@ body {
   grid-template-columns: auto auto auto;
   gap: 100px;
 }
+
+/* Gaya awal untuk animasi */
+.animate-init {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+/* Gaya saat elemen terlihat */
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .main-section .packages .card-package {
   width: 358px;
   height: 663px;
@@ -448,6 +498,12 @@ body {
   gap: 30px;
   justify-content: start;
   align-items: center;
+  transition-duration: 800ms;
+  animation: fadeInUp 1s ease-in-out;
+}
+.main-section .packages .card-package:hover {
+  transform: translateY(-15px);
+  transition-duration: 800ms;
 }
 .main-section .packages .card-package .header-card {
   background-color: #0389ff;
@@ -539,8 +595,8 @@ body {
   height: auto;
   display: none;
 }
-.main-section .modal-fitur h1{
-  color: #0389FF;
+.main-section .modal-fitur h1 {
+  color: #0389ff;
 }
 
 .modal-fitur.active {
@@ -916,7 +972,7 @@ body {
 
 /* START FOOTER */
 .footer {
-  background: #0080FF;
+  background: #0080ff;
   color: white;
   padding: 4rem 6rem 2rem;
 }
@@ -998,24 +1054,23 @@ body {
 }
 
 @media (max-width: 992px) {
-
-.footer-content {
+  .footer-content {
     flex-wrap: wrap;
     gap: 2rem;
-}
+  }
 
-.footer-col {
+  .footer-col {
     flex: 0 0 calc(50% - 1rem);
-}
+  }
 }
 
 @media (max-width: 768px) {
-.footer {
+  .footer {
     padding: 3rem 2rem 1rem;
-}
+  }
 
-.footer-col {
+  .footer-col {
     flex: 0 0 100%;
-}
+  }
 }
 /* END FOOTER */
