@@ -20,6 +20,19 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// CODE KETIKA ROUTE ACTIVE
+
+const Links = document.querySelectorAll(".nav-links a");
+
+const currentPath = window.location.pathname;
+console.log("ini apa", currentPath)
+
+Links.forEach((link) => {
+  console.log(link.getAttribute("href"))
+  if (link.getAttribute("href").includes(currentPath)) {
+    link.classList.add("active");
+  }
+});
 // END NAVBAR
 
 
