@@ -30,11 +30,14 @@ document.querySelector(".button-fitur").onclick = () => {
   const icon = document.querySelector("#icon-toggle");
 
   modal.classList.toggle("active");
-  if (modal.classList.contains("active")) {
-    icon.src = "/image/icon-down.png";
-  } else {
-    icon.src = "/image/icon-up.png";
-  }
+
+ if (modal.classList.contains("active")) {
+   icon.classList.remove("fa-angle-up");
+   icon.classList.add("fa-angle-down");
+ } else {
+   icon.classList.remove("fa-angle-down");
+   icon.classList.add("fa-angle-up");
+ }
 };
 // end modal-fitur
 
@@ -57,4 +60,18 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach((card) => {
    card.classList.add("animate-init");
   observer.observe(card);
+});
+
+// CODE KETIKA ROUTE ACTIVE
+
+const Links = document.querySelectorAll(".nav-links a");
+
+const currentPath = window.location.pathname;
+console.log("ini apa", currentPath)
+
+Links.forEach((link) => {
+  console.log(link.getAttribute("href"))
+  if (link.getAttribute("href").includes(currentPath)) {
+    link.classList.add("active");
+  }
 });
