@@ -255,9 +255,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10rem 5rem 5rem;
+    padding: 1rem 5rem 5rem;
     background-color: #e6f7ff;
-    height: 100vh;
+    height: 90vh;
     box-sizing: border-box;
   }
   
@@ -274,7 +274,7 @@ body {
   
   .hero-title span {
     color: #0070f3;
-    font-size: 65px;
+    font-size: 50px;
   }
   
   .hero-description {
@@ -304,8 +304,9 @@ body {
 
   .hero-image img {
     max-width: 100%;
-    height: auto;
-    margin-top: 7rem;
+    height: 500px;
+    width: 500px;
+    margin-top: 5rem;
     border-radius: 10px;
     animation: float 3s infinite ease-in-out;
   }
@@ -932,7 +933,7 @@ body {
 
 .faq-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 100px;
     display: block;
 }
 
