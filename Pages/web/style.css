@@ -255,6 +255,8 @@ body {
 }
 /* end navbar */
 
+
+
 /* Start Style Hero */
 .hero {
     position: relative;
@@ -423,6 +425,11 @@ body {
   }
   
   @media (max-width: 480px) {
+
+    .hero {
+      height: 80vh;
+    }
+
     .hero h1 {
       font-size: 30px;
     }
