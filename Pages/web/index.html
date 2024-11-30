@@ -5,15 +5,292 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img class="plasahosting"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/50ad5b2d56ebd1f9aa374dadbd9e011b97efe5638c783b81b10a9a880f2f628f?placeholderIfAbsent=true&apiKey=e5258137e78a4fc0b272fd2b3afc0b5f" />
+                </a>
+            </div>
+            <div class="navigation">
+                <ul class="nav-links">
+                    <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">Hosting</a>
+                    <a href="../../../plasa-hosting/Pages/domain/index.html">Domain</a>
+                    <a href="../../Pages/web/index.html">Website</a>
+                    <a href="#">Blog</a>
+                </ul>
+                <a href="#login">
+                    <div class="user-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </a>
+            </div>
+            <div id="hamburger" class="hamburger">
+                <i class="fa-solid fa-bars" id="menu"></i>
+                <i class="fa-regular fa-circle-xmark" id="close"></i>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Start Hero -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Bangun Website Impian Anda Bersama Kami</h1>
+                <p>Tingkatkan kehadiran online Anda dengan website profesional, cepat, dan sesuai kebutuhan bisnis Anda.
+                    Kami siap membantu Anda dari perencanaan hingga peluncuran.</p>
+                <a href="#getstarted" class="btn-get-started">Get Started</a>
+            </div>
+        </div>
+    </section>
+    <div class="services">
+        <div class="card">
+            <i class="icon">&#x2714;</i>
+            <h3>Perencanaan</h3>
+            <p>Konsultasi</p>
+        </div>
+        <div class="card">
+            <i class="icon">&#9881;</i>
+            <h3>Desain</h3>
+            <p>Pengembangan</p>
+        </div>
+        <div class="card">
+            <i class="icon">&#x1F50D;</i>
+            <h3>Uji Coba</h3>
+            <p>Optimasi</p>
+        </div>
+        <div class="card">
+            <i class="icon">&#x1F4E6;</i>
+            <h3>Peluncuran</h3>
+            <p>Pemeliharaan</p>
+        </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Start Layanan dan Paket -->
+    <section class="services-section">
+        <h2 class="services-title">Lihat Paket & Layanan Pembuatan Website</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-type">Paket Basic</div>
+                <div class="service-content">
+                    <div class="price">Rp 700.000/tahun</div>
+                    <ul class="features">
+                        <li>Design Responsive</li>
+                        <li>SEO Dasar</li>
+                        <li>Maksimal 8 Halaman</li>
+                        <li>CMS (Content Management
+                            Systems)</li>
+                    </ul>
+                    <button class="order-button">Pesan Sekarang</button>
+                    <div class="divider"></div>
+                    <div class="suitable-for">
+                        <h4><i class="fa-solid fa-thumbtack"></i> Cocok Untuk</h4>
+                        <p>Website profile perusahaan kecil</p>
+                        <p>Website portofolio</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-type">Paket Bisnis</div>
+                <div class="service-content">
+                    <div class="price">Rp 1.500.000/tahun</div>
+                    <ul class="features">
+                        <li>Semua fitur Basic</li>
+                        <li>Maksimal 12 Halaman</li>
+                        <li>SEO Optimasi Lanjutan</li>
+                        <li>Form Kontak</li>
+                        <li>Integrasi Media Sosial</li>
+                    </ul>
+                    <button class="order-button">Pesan Sekarang</button>
+                    <div class="divider"></div>
+                    <div class="suitable-for">
+                        <h4><i class="fa-solid fa-thumbtack"> </i> Cocok Untuk</h4>
+                        <p>Website personal dan blog</p>
+                        <p>Bisnis kecil dan startup</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-type">Paket E-commerce</div>
+                <div class="service-content">
+                    <div class="price">Rp 3.000.000/tahun</div>
+                    <ul class="features">
+                        <li>Design Responsive</li>
+                        <li>SEO Dasar</li>
+                        <li>Halaman Disesuaikan</li>
+                        <li>CMS (Content Management
+                            Systems)</li>
+                    </ul>
+                    <button class="order-button">Pesan Sekarang</button>
+                    <div class="divider"></div>
+                    <div class="suitable-for">
+                        <h4><i class="fa-solid fa-thumbtack"> </i> Cocok Untuk</h4>
+                        <p>Website profile perusahaan kecil</p>
+                        <p>Website portofolio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Layanan dan Paket -->
+
+    <!-- Start Manfaat Layanan Kami -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefits-image">
+                <img src="../../image/web-img1.png" alt="Illustration" />
+            </div>
+            <div class="benefits-content">
+                <h2>Manfaat Menggunakan Layanan Kami</h2>
+                <ul class="benefits-list">
+                    <li>
+                        <div class="benefit-icon">1</div>
+                        <p>Desain Responsif dan Profesional</p>
+                    </li>
+                    <li>
+                        <div class="benefit-icon">2</div>
+                        <p>SEO-Friendly</p>
+                    </li>
+                    <li>
+                        <div class="benefit-icon">3</div>
+                        <p>Dukungan Teknis 24/7</p>
+                    </li>
+                    <li>
+                        <div class="benefit-icon">4</div>
+                        <p>Keamanan Terjamin</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Manfaat Layanan Kami -->
+
+
+
+    <!-- START PESAN WEB SEKARANG -->
+    <section class="buy-web-section">
+        <div class="buy-web-container">
+            <h2 class="buy-web-title">Hubungi Kami Sekarang untuk Konsultasi Gratis dan dapatkan website profesional
+                yang siap membantu bisnis Anda berkembang di dunia digital!</h2>
+            <button class="buy-web-button">
+                Beli Hosting Sekarang
+            </button>
+        </div>
+    </section>
+    <!-- END PESAN WEB SEKARANG -->
+
+
+
+    <!-- Start FAQ -->
+    <section class="faq-section">
+        <div class="faq-left">
+            <h2 class="faq-title">FAQ</h2>
+            <h3 class="faq-subtitle">(Frequently Asked Questions)</h3>
+            <p class="faq-description">Pertanyaan yang sering ditanyakan customer Plasa Hosting</p>
+            <img src="./../../image/faq-img.png" alt="FAQ Illustration" class="faq-image">
+        </div>
+
+        <div class="faq-right">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Bagaimana cara memesan web di sini?
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Anda dapat membeli layanan hosting dan domain melalui website kami dengan mengikuti langkah-langkah
+                    yang mudah.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Bagaimana saya mengelola domain dan hosting saya?
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Kami menyediakan control panel yang mudah digunakan untuk mengelola domain dan hosting Anda.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Apakah layanan Anda mendukung keamanan website?
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Ya, kami menyediakan berbagai fitur keamanan termasuk SSL, firewall, dan backup regular.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FAQ -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">Logo</div>
+                <p class="footer-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui earum quae ducimus tenetur
+                    vero.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Jelajahi Menu</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Layanan</a></li>
+                    <li><a href="#">Produk</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Hubungi Kami</h4>
+                <ul class="footer-links">
+                    <li>Jl.xxxxxxxxxxxxxxxxxxxx nama kota, xxxx di xxxxxxxxxx</li>
+                    <li>+62 85574312178</li>
+                    <li>blablabla@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            Copyright © 2024 Plasa Hosting. All rights Reserved
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
-
-Lorem, ipsum dolor.
-
-Lorem ipsum dolor sit amet.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
