@@ -180,6 +180,9 @@ body {
     color: #fff;
     z-index: 11;
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -251,6 +254,9 @@ body {
     color: #fff;
     z-index: 11;
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
   .logo .plasahosting {
     width: 90px;

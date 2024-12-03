@@ -31,6 +31,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .navigation {
   display: flex;
   align-items: center;
@@ -49,6 +50,7 @@ body {
   padding: 15px 45px;
   z-index: 1;
 }
+
 .nav-links li {
   padding: 10px 15px;
   border-radius: 20px;
@@ -63,6 +65,7 @@ body {
   border-bottom: solid 2px;
   border-color: transparent;
 }
+
 .nav-links a:hover {
   font-family: "Poopins", sans-serif;
   text-decoration: none;
@@ -91,6 +94,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .user-icon i {
   width: auto;
   height: auto;
@@ -107,9 +111,11 @@ body {
   color: #0389ff;
   width: 20px;
 }
+
 .hamburger #menu {
   cursor: pointer;
 }
+
 .hamburger #close {
   display: none;
 }
@@ -127,6 +133,7 @@ body {
     display: flex;
     z-index: 99999;
   }
+
   .nav-links {
     left: 50%;
     top: 0;
@@ -143,9 +150,11 @@ body {
     z-index: 10;
     padding: 70px 70px 50px 40px;
   }
+
   .nav-links a {
     color: transparent;
   }
+
   .nav-links a.active {
     border-bottom: solid 2px #fff;
   }
@@ -170,14 +179,19 @@ body {
   .hamburger {
     display: flex;
   }
+
   .hamburger.active #menu {
     display: none;
   }
+
   .hamburger.active #close {
     display: flex;
     color: #fff;
     z-index: 11;
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -187,13 +201,16 @@ body {
     display: flex;
     z-index: 99999;
   }
+
   .user-icon {
     width: 30px;
     height: 30px;
   }
+
   .user-icon i {
     font-size: 0.8rem;
   }
+
   .nav-links {
     right: 0;
     top: 0;
@@ -216,6 +233,7 @@ body {
     margin: 15px 0;
     color: #fff;
   }
+
   .nav-links a.active {
     border-bottom: solid 2px #fff;
   }
@@ -241,14 +259,19 @@ body {
   .hamburger {
     display: flex;
   }
+
   .hamburger.active #menu {
     display: none;
   }
+
   .hamburger.active #close {
     display: flex;
     color: #fff;
     z-index: 11;
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
   }
 
   .logo .plasahosting {
@@ -256,12 +279,85 @@ body {
     height: auto;
   }
 }
+
 /* end navbar */
 
 /* START MAIN */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #333;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .main-section {
   width: 100%;
 }
+
 .desc-plasahosting {
   display: flex;
   justify-content: center;
@@ -275,6 +371,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  animation: fadeInLeft 1s ease-in-out;
 }
 
 .desc-plasahosting .deskripsi h1 {
@@ -292,21 +389,34 @@ body {
   color: #565558;
   font-weight: 700;
 }
+
 .desc-plasahosting img {
   width: 500px;
   height: auto;
+  animation: float 3s infinite ease-in-out;
 }
+
 .main-section .quote {
   width: 100%;
   padding: 20px 30px 20px 30px;
   background-color: #e1e7ec;
   margin-bottom: 2.5rem;
+  opacity: 0; /* Hidden initially */
+  transform: translateY(50px); /* Slide up animation */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
 }
+
+.main-section .quote.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset position when visible */
+}
+
 .main-section .quote h1 {
   font-weight: 600;
   color: #0389ff;
   text-align: center;
   font-size: 1.5rem;
+  overflow: hidden; /* Ensure text is hidden before typing */
 }
 
 .main-section .history-plasahosting {
@@ -315,12 +425,13 @@ body {
   gap: 40px;
   justify-content: center;
   align-items: center;
-  background-image: url(/image/gedung.jpg);
+  background-image: url("../../image/gedung.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
   padding: 40px;
 }
+
 .main-section .history-plasahosting .shadow {
   position: absolute;
   width: 100%;
@@ -334,12 +445,15 @@ body {
   font-weight: 600;
   z-index: 999;
   font-size: 2rem;
+  animation: fadeInTop 1s ease-in-out;
 }
+
 .main-section .desc-history {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .main-section .history-plasahosting .desc-history p {
   color: #fff;
   z-index: 999;
@@ -349,6 +463,17 @@ body {
   font-size: 1.2rem;
   text-shadow: 0 0 15px #000000;
 }
+
+.main-section .history-plasahosting .desc-history p:nth-child(1){
+  animation: fadeInTop 1s ease-in-out;
+}
+.main-section .history-plasahosting .desc-history p:nth-child(2){
+  animation: fadeInLeft 1s ease-in-out;
+}
+.main-section .history-plasahosting .desc-history p:nth-child(3){
+  animation: fadeInRight 1s ease-in-out;
+}
+
 .main-section .section-why-plasahosting {
   display: flex;
   justify-content: center;
@@ -356,20 +481,26 @@ body {
   padding: 60px 40px;
   gap: 20px;
 }
+
 .main-section .section-why-plasahosting img {
   width: 450px;
   height: auto;
+  animation: float 3s infinite ease-in-out;
 }
+
 .main-section .section-why-plasahosting .desc-why-plasahosting h1 {
   color: #0389ff;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
+  animation: fadeInLeft 1s ease-in-out;
 }
+
 .main-section .section-why-plasahosting .desc-why-plasahosting p {
   color: #565558;
   text-align: center;
   font-size: 1.2rem;
+  animation: fadeInLeft 1s ease-in-out;
 }
 
 .main-section .server {
@@ -387,10 +518,12 @@ body {
   height: auto;
   position: absolute;
   right: 0;
+  animation: fadeInRight 1s ease-in-out;
 }
 
 .main-section .server .desc-server {
   width: 50%;
+  animation: fadeInLeft 1s ease-in-out;
 }
 
 .main-section .server .desc-server h1 {
@@ -399,6 +532,7 @@ body {
   font-weight: 700;
   margin-bottom: 2rem;
 }
+
 .main-section .server .desc-server p {
   color: #565558;
   font-size: 1.2rem;
@@ -414,16 +548,15 @@ body {
 
 .main-section .domain-murah img {
   width: 450px;
+  animation: fadeInRight 1s ease-in-out;
 }
 
 .main-section .domain-murah .background-domain-murah {
   width: 570px;
   height: 400px;
-  background-image: linear-gradient(
-    to right,
-    rgb(3, 137, 255),
-    rgb(5, 66, 120)
-  );
+  background-image: linear-gradient(to right,
+      rgb(3, 137, 255),
+      rgb(5, 66, 120));
   position: absolute;
   right: 0;
   border-radius: 10rem 0 0 10rem;
@@ -434,151 +567,335 @@ body {
   align-items: end;
   gap: 1rem;
   box-shadow: 4px 1.5px 15px rgba(5, 66, 120, 0.849);
+  animation: fadeInTop 1s ease-in-out;
 }
+
 .main-section .domain-murah .background-domain-murah .title {
   font-size: 2rem;
   color: #fff;
   font-weight: 700;
   text-align: right;
 }
+
 .main-section .domain-murah .background-domain-murah p {
   font-size: 14px;
   text-align: right;
   color: #fff;
   font-weight: 400;
 }
- .main-section .domain-murah .background-domain-murah .cards-diskon {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    align-items: center;
-    justify-content: end;
-    gap: 2rem;
-    margin-top: 1rem;
-    width: 100%;
-  }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon {
-    width: 100%;
-    height: 100px;
-    border: solid 3px #fff;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.3rem;
-  }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    h1 {
-    font-size: 16px;
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-  }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    p {
-    font-size: 12px;
-    text-align: center;
-    color: #f2ff3a;
-  }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    span {
-    font-size: 12px;
-    text-align: center;
-    text-decoration: line-through;
-    color: #f2ff3a;
-  }
-   .main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
-    background-color: #fff;
-    font-size: 14px;
-    color: #0389ff;
-    font-weight: 700;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 5rem;
-    width: max-content;
-  }
+
+.main-section .domain-murah .background-domain-murah .cards-diskon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon {
+  width: 100%;
+  height: 100px;
+  border: solid 3px #fff;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon h1 {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon p {
+  font-size: 12px;
+  text-align: center;
+  color: #f2ff3a;
+}
+
+.main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon span {
+  font-size: 12px;
+  text-align: center;
+  text-decoration: line-through;
+  color: #f2ff3a;
+}
+
+.main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
+  background-color: #fff;
+  font-size: 14px;
+  color: #0389ff;
+  font-weight: 700;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5rem;
+  width: max-content;
+}
+
+.main-section .layanan {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 50px;
+  gap: 20px;
+}
+
+.main-section .layanan .title-layanan {
+  text-align: center;
+  animation: fadeInBottom 1s ease-in-out;
+}
+
+.main-section .layanan .title-layanan h1 {
+  color: #0389ff;
+  font-size: 2rem;
+}
+
+.main-section .layanan .title-layanan p {
+  color: #565558;
+  font-size: 16px;
+}
+
+.main-section .layanan .content-layanan {
+  width: 100%;
+  height: auto;
+  color: #fff;
+  box-shadow: 2px 2px 10px rgba(86, 85, 88, 0.615);
+  padding: 40px 40px 40px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  animation: fadeInBottom 1s ease-in-out;
+}
+
+.main-section .layanan .content-layanan .layanan-utama {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.main-section .layanan .content-layanan .layanan-utama i {
+  color: #0389ff;
+  height: auto;
+  margin-right: 10px;
+  font-size: 30px;
+  width: 50px;
+}
+
+.main-section .layanan .content-layanan .layanan-utama img {
+  width: 50px;
+  height: 1rem;
+  margin-right: 10px;
+}
+
+.main-section .layanan .content-layanan .layanan-utama .desc-layanan {
+  width: 100%;
+}
+
+.main-section .layanan .content-layanan .layanan-utama .desc-layanan h1 {
+  font-size: 1.3rem;
+  color: #0389ff;
+  text-align: start;
+  font-weight: 600;
+}
+
+.main-section .layanan .content-layanan .layanan-utama .desc-layanan p {
+  font-size: 1rem;
+  color: #000000;
+  text-align: start;
+}
+
+.main-section .form-question {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px;
+}
+
+.main-section .form-question .title-question h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0389ff;
+  animation: fadeInBottom 1s ease-in-out;
+}
+
+.main-section .form-question .title-question p {
+  text-align: center;
+  font-size: 16px;
+  animation: fadeInBottom 1s ease-in-out;
+}
+
+.main-section .form-question .content-question {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.main-section .form-question .content-question img {
+  width: 400px;
+  height: auto;
+  animation: float 1s infinite ease-in-out;
+}
+
+.main-section .form-question .content-question .form {
+  width: 100%;
+}
+
+.main-section .form-question .content-question .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInBottom 1s ease-in-out;
+}
+
+.main-section .form-question .content-question .form input {
+  width: 100%;
+  height: 55px;
+  border: 2px solid rgba(3, 137, 255, 0.516);
+  border-radius: 10px;
+  padding: 5px 20px;
+  outline: none;
+}
+
+.main-section .form-question .content-question .form button {
+  width: auto;
+  height: 55px;
+  background-color: #0389ff;
+  padding: 5px 20px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.main-section .form-question .content-question .form input::placeholder {
+  font-size: 16px;
+}
+
+.main-section .form-question .content-question .form .nama-lengkap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-section .form-question .content-question .form .email-telp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.main-section .form-question .content-question .form .pesan {
+  width: 100%;
+  height: 150px;
+  border: 2px solid rgba(3, 137, 255, 0.516);
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+
+.main-section .form-question .content-question .form .pesan::placeholder {
+  height: auto;
+  text-align: start;
+}
 
 @media (max-width: 976px) {
   .main-section .history-plasahosting {
     padding: 40px 30px;
   }
+
   .desc-plasahosting {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 35px 30px 35px;
   }
+
   .desc-plasahosting .deskripsi {
     width: 50%;
   }
+
   .desc-plasahosting .deskripsi h1 {
     font-size: 1.3rem;
   }
+
   .desc-plasahosting .deskripsi p {
     font-size: 16px;
   }
+
   .desc-plasahosting .deskripsi p span {
     color: #565558;
     font-weight: 700;
   }
+
   .desc-plasahosting img {
     width: 400px;
     height: auto;
   }
+
   .main-section .history-plasahosting h1 {
     font-size: 1.5rem;
   }
+
   .main-section .history-plasahosting .desc-history p {
     font-size: 16px;
   }
+
   .main-section .section-why-plasahosting {
     padding: 60px 40px;
     gap: 20px;
   }
+
   .main-section .section-why-plasahosting .desc-why-plasahosting p {
     font-size: 16px;
   }
+
   .main-section .server {
-    padding: 50px ;
+    padding: 50px;
   }
+
   .main-section .server img {
     width: 400px;
     height: auto;
     position: absolute;
     right: 0;
   }
+
   .main-section .server .desc-server p {
     color: #565558;
     font-size: 1.2rem;
     padding-right: 0;
   }
-  .main-section .domain-murah  {
+
+  .main-section .domain-murah {
     margin-bottom: 5rem;
-}
+  }
+
   .main-section .domain-murah img {
     width: 300px;
-}
-.main-section .domain-murah .background-domain-murah {
-  width: 450px;
-  height: auto;
-}
-.main-section .domain-murah .background-domain-murah .cards-diskon {
+  }
+
+  .main-section .domain-murah .background-domain-murah {
+    width: 450px;
+    height: auto;
+  }
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-content: center;
@@ -587,11 +904,41 @@ body {
     margin-top: 1rem;
     width: 100%;
   }
+  .main-section .form-question {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 40px;
+  }
+  
+  .main-section .form-question .title-question h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0389ff;
+  }
+  
+  .main-section .form-question .title-question p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .main-section .form-question .content-question {
+    gap: 3rem;
+  }
+  
+  .main-section .form-question .content-question img {
+    width: 300px;
+    height: auto;
+  }
+  .main-section .form-question .content-question .form input::placeholder {
+    font-size: 14px;
+  }
 }
+
 @media (max-width: 768px) {
   .main-section .history-plasahosting {
     padding: 40px 30px;
   }
+
   .desc-plasahosting {
     display: flex;
     flex-direction: column-reverse;
@@ -599,41 +946,52 @@ body {
     align-items: center;
     padding: 30px 35px 30px 35px;
   }
+
   .desc-plasahosting .deskripsi {
     width: 100%;
     gap: 30px;
   }
+
   .desc-plasahosting .deskripsi h1 {
     font-size: 1.5rem;
   }
+
   .desc-plasahosting .deskripsi p {
     font-size: 14px;
   }
+
   .desc-plasahosting .deskripsi p span {
     color: #565558;
     font-weight: 700;
   }
+
   .desc-plasahosting img {
     width: 400px;
     height: auto;
   }
+
   .main-section .quote h1 {
     font-size: 1.3rem;
   }
+
   .main-section .history-plasahosting h1 {
     font-size: 1.5rem;
   }
+
   .main-section .history-plasahosting .desc-history p {
     font-size: 14px;
   }
+
   .main-section .section-why-plasahosting {
     flex-direction: column-reverse;
     padding: 60px 40px;
     gap: 20px;
   }
+
   .main-section .section-why-plasahosting .desc-why-plasahosting p {
     font-size: 14px;
   }
+
   .main-section .server {
     justify-content: start;
     flex-direction: column-reverse;
@@ -643,6 +1001,7 @@ body {
     height: 700px;
     margin-bottom: 50px;
   }
+
   .main-section .server img {
     position: absolute;
     right: 0;
@@ -650,21 +1009,28 @@ body {
     width: 350px;
     height: auto;
   }
+
   .main-section .server .desc-server h1 {
     font-size: 1.5rem;
   }
+
   .main-section .server .desc-server p {
     font-size: 16px;
   }
+
   .main-section .server .desc-server {
     width: 100%;
   }
-   .main-section .domain-murah {
+
+  .main-section .domain-murah {
     padding: 1rem;
+    margin-bottom: 20px;
   }
+
   .main-section .domain-murah img {
     display: none;
   }
+
   .main-section .domain-murah .background-domain-murah {
     border-radius: 3rem;
     width: 100%;
@@ -677,23 +1043,24 @@ body {
     align-items: center;
     gap: 1rem;
     box-shadow: 4px 1.5px 15px rgba(5, 66, 120, 0.849);
-    background-image: linear-gradient(
-      to top,
-      rgb(3, 137, 255),
-      rgb(5, 66, 120)
-    );
+    background-image: linear-gradient(to top,
+        rgb(3, 137, 255),
+        rgb(5, 66, 120));
   }
+
   .main-section .domain-murah .background-domain-murah .title {
     font-size: 1.5rem;
     color: #fff;
     font-weight: 700;
   }
+
   .main-section .domain-murah .background-domain-murah p {
     font-size: 16px;
     text-align: center;
     color: #fff;
     font-weight: 400;
   }
+
   .main-section .domain-murah .background-domain-murah .cards-diskon {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -703,11 +1070,8 @@ body {
     margin-top: 1rem;
     width: 100%;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon {
     width: 100%;
     height: 100px;
     border: solid 3px #fff;
@@ -718,37 +1082,25 @@ body {
     justify-content: center;
     gap: 0.3rem;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    h1 {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon h1 {
     font-size: 16px;
     text-align: center;
     color: #fff;
-    font-weight: 600;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    p {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon p {
     font-size: 12px;
     text-align: center;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    span {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon span {
     font-size: 12px;
     text-align: center;
     text-decoration: line-through;
     color: #f2ff3a;
   }
+
   .main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
     background-color: #fff;
     font-size: 14px;
@@ -760,12 +1112,83 @@ body {
     width: max-content;
     margin-top: 2rem;
   }
+
+  .main-section .layanan .content-layanan .layanan-utama {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+  .main-section .layanan .content-layanan .layanan-utama i {
+    color: #0389ff;
+    height: auto;
+    margin-right: 10px;
+    font-size: 30px;
+    width: 50px;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama img {
+    width: 50px;
+    height: 1rem;
+    margin-right: 10px;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama .desc-layanan {
+    width: 100%;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama .desc-layanan h1 {
+    font-size: 1.3rem;
+    color: #0389ff;
+    text-align: start;
+    font-weight: 600;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama .desc-layanan p {
+    font-size: 14px;
+    color: #000000;
+    text-align: start;
+  }
+
+  .main-section .form-question {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 30px;
+  }
+  
+  .main-section .form-question .title-question h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0389ff;
+  }
+  
+  .main-section .form-question .title-question p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .main-section .form-question .content-question {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .main-section .form-question .content-question .form input::placeholder {
+    font-size: 12px;
+  }
+  
 }
 
 @media (max-width: 460px) {
   .main-section .history-plasahosting {
     padding: 40px 30px;
   }
+
   .desc-plasahosting {
     display: flex;
     flex-direction: column-reverse;
@@ -773,50 +1196,63 @@ body {
     align-items: center;
     padding: 30px 35px 30px 35px;
   }
+
   .desc-plasahosting .deskripsi {
     width: 100%;
     gap: 20px;
   }
+
   .desc-plasahosting .deskripsi h1 {
     font-size: 1.3rem;
   }
+
   .desc-plasahosting .deskripsi p {
     font-size: 14px;
     text-align: justify;
   }
+
   .desc-plasahosting .deskripsi p span {
     color: #565558;
     font-weight: 700;
   }
+
   .desc-plasahosting img {
     width: 350px;
     height: auto;
   }
+
   .main-section .quote h1 {
     font-size: 1.2rem;
   }
+
   .main-section .history-plasahosting h1 {
     font-size: 1.3rem;
   }
+
   .main-section .history-plasahosting .desc-history p {
     font-size: 14px;
   }
+
   .main-section .section-why-plasahosting {
     flex-direction: column-reverse;
     padding: 40px 20px;
     gap: 20px;
   }
+
   .main-section .section-why-plasahosting img {
     width: 300px;
     height: auto;
   }
+
   .main-section .section-why-plasahosting .desc-why-plasahosting h1 {
     font-size: 1.3rem;
     margin-bottom: 8px;
   }
+
   .main-section .section-why-plasahosting .desc-why-plasahosting p {
     font-size: 14px;
   }
+
   .main-section .server {
     justify-content: start;
     flex-direction: column-reverse;
@@ -826,6 +1262,7 @@ body {
     height: 650px;
     margin-bottom: 50px;
   }
+
   .main-section .server img {
     position: absolute;
     right: 0;
@@ -833,9 +1270,11 @@ body {
     width: 300px;
     height: auto;
   }
+
   .main-section .server .desc-server h1 {
     font-size: 1.3rem;
   }
+
   .main-section .server .desc-server p {
     font-size: 14px;
     text-align: justify;
@@ -843,10 +1282,13 @@ body {
 
   .main-section .domain-murah {
     padding: 1rem;
+    margin-bottom: 3rem;
   }
+
   .main-section .domain-murah img {
     display: none;
   }
+
   .main-section .domain-murah .background-domain-murah {
     border-radius: 3rem;
     width: 100%;
@@ -859,23 +1301,24 @@ body {
     align-items: center;
     gap: 1rem;
     box-shadow: 4px 1.5px 15px rgba(5, 66, 120, 0.849);
-    background-image: linear-gradient(
-      to top,
-      rgb(3, 137, 255),
-      rgb(5, 66, 120)
-    );
+    background-image: linear-gradient(to top,
+        rgb(3, 137, 255),
+        rgb(5, 66, 120));
   }
+
   .main-section .domain-murah .background-domain-murah .title {
     font-size: 1.3rem;
     color: #fff;
     font-weight: 700;
   }
+
   .main-section .domain-murah .background-domain-murah p {
     font-size: 14px;
     text-align: center;
     color: #fff;
     font-weight: 400;
   }
+
   .main-section .domain-murah .background-domain-murah .cards-diskon {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -885,11 +1328,8 @@ body {
     margin-top: 1rem;
     width: 100%;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon {
     width: 100%;
     height: 100px;
     border: solid 3px #fff;
@@ -900,37 +1340,26 @@ body {
     justify-content: center;
     gap: 0.3rem;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    h1 {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon h1 {
     font-size: 16px;
     text-align: center;
     color: #fff;
     font-weight: 600;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    p {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon p {
     font-size: 12px;
     text-align: center;
   }
-  .main-section
-    .domain-murah
-    .background-domain-murah
-    .cards-diskon
-    .card-diskon
-    span {
+
+  .main-section .domain-murah .background-domain-murah .cards-diskon .card-diskon span {
     font-size: 12px;
     text-align: center;
     text-decoration: line-through;
     color: #f2ff3a;
   }
+
   .main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
     background-color: #fff;
     font-size: 14px;
@@ -940,6 +1369,100 @@ body {
     border: none;
     border-radius: 5rem;
     width: max-content;
+  }
+
+  .main-section .layanan {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    gap: 20px;
+  }
+
+  .main-section .layanan .title-layanan h1 {
+    color: #0389ff;
+    font-size: 1.3rem;
+  }
+
+  .main-section .layanan .title-layanan p {
+    color: #565558;
+    font-size: 14px;
+  }
+
+  .main-section .layanan .content-layanan {
+    width: 100%;
+    height: auto;
+    color: #fff;
+    box-shadow: 2px 2px 10px rgba(86, 85, 88, 0.615);
+    padding: 20px 20px 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama i {
+    color: #0389ff;
+    height: auto;
+    margin-right: 10px;
+    font-size: 30px;
+    width: 50px;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama img {
+    width: 50px;
+    height: 1rem;
+    margin-right: 10px;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama .desc-layanan {
+    width: 100%;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama .desc-layanan h1 {
+    font-size: 1rem;
+    color: #0389ff;
+    text-align: start;
+    font-weight: 600;
+  }
+
+  .main-section .layanan .content-layanan .layanan-utama .desc-layanan p {
+    font-size: 14px;
+    color: #000000;
+    text-align: start;
+  }
+  .main-section .form-question .title-question h1 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #0389ff;
+  }
+  
+  .main-section .form-question .title-question p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .main-section .form-question .content-question img {
+    width: 200px;
+    height: auto;
+  }
+  .main-section .form-question .content-question .form input {
+    padding: 3px 10px;
+
+  }
+  .main-section .form-question .content-question .form .pesan {
+    padding: 3px 10px;
+  }
+  .main-section .form-question .content-question .form button {
+    font-size: 14px;
   }
 }
 
@@ -1048,4 +1571,5 @@ body {
     flex: 0 0 100%;
   }
 }
+
 /* END FOOTER */
