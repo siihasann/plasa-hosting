@@ -25,6 +25,11 @@ body {
   width: 170px;
   height: auto;
 }
+.parent-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .navigation {
   display: flex;
   align-items: center;
@@ -114,6 +119,13 @@ body {
     display: flex;
     z-index: 99999;
   }
+  .navbar .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
   .nav-links {
     left: 50%;
     top: 0;
@@ -167,9 +179,6 @@ body {
   cursor: pointer;
 }
 
-  .user-icon {
-    display: none;
-  }
 }
 
 /* Responsive   Mobile */
@@ -178,6 +187,22 @@ body {
     display: flex;
     z-index: 99999;
   }
+
+  .navbar .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .user-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .user-icon i {
+    font-size: 0.8rem;
+  }
+
   .nav-links {
     right: 0;
     top: 0;
@@ -202,7 +227,7 @@ body {
   }
   .nav-links a.active {
   border-bottom:solid 2px #fff;
-}
+  }
 
   .nav-links.active {
     transform: translateX(-25%);
@@ -228,9 +253,6 @@ body {
   cursor: pointer;
 }
 
-  .user-icon {
-    display: none;
-  }
   .logo .plasahosting {
     width: 90px;
     height: auto;
@@ -556,9 +578,10 @@ body {
   color: #fff;
   font-family: "poppins", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   padding: 8px 40px;
   border-radius: 10px;
+  text-align: center;
 }
 .main-section .packages .card-package .button-buy:hover {
   width: 100%;
@@ -566,9 +589,10 @@ body {
   color: #fff;
   font-family: "poppins", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   padding: 8px 40px;
   border-radius: 10px;
+  text-align: center;
 }
 .main-section .packages .card-package .all-spesifikasi {
   width: 100%;

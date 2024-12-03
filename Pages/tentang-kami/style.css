@@ -1,0 +1,1051 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+/* start navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px 10px 30px;
+  background-color: #e6f3ff;
+  z-index: 9999999;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 2px rgba(0, 0, 0, 1%), 0 0 20px #00000060;
+}
+
+.logo .plasahosting {
+  width: 170px;
+  height: auto;
+}
+
+.parent-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  border-radius: 50px;
+  width: auto;
+  height: 67px;
+  padding: 15px 45px;
+  z-index: 1;
+}
+.nav-links li {
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.nav-links a {
+  font-family: "Poopins", sans-serif;
+  text-decoration: none;
+  color: #0389ff;
+  font-weight: 700;
+  padding: 3px;
+  border-bottom: solid 2px;
+  border-color: transparent;
+}
+.nav-links a:hover {
+  font-family: "Poopins", sans-serif;
+  text-decoration: none;
+  color: #0389ff;
+  font-weight: 700;
+  transition-duration: 1s;
+  animation-duration: 1s;
+  border-bottom: solid 2px;
+}
+
+.nav-links a.active {
+  border-bottom: solid 2px #0389ff;
+}
+
+.nav-links a:hover {
+  color: #151616;
+  transition: 0.3s;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0389ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-icon i {
+  width: auto;
+  height: auto;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger i {
+  color: #0389ff;
+  width: 20px;
+}
+.hamburger #menu {
+  cursor: pointer;
+}
+.hamburger #close {
+  display: none;
+}
+
+/* Responsive tablet */
+@media (max-width: 768px) {
+  .navbar .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar.active {
+    display: flex;
+    z-index: 99999;
+  }
+  .nav-links {
+    left: 50%;
+    top: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    width: 75%;
+    transform: translateX(100%);
+    transition-duration: 1s;
+    position: fixed;
+    z-index: 10;
+    padding: 70px 70px 50px 40px;
+  }
+  .nav-links a {
+    color: transparent;
+  }
+  .nav-links a.active {
+    border-bottom: solid 2px #fff;
+  }
+
+  .nav-links.active a {
+    margin: 15px 0;
+    color: #fff;
+  }
+
+  .nav-links.active {
+    transform: translateX(-25%);
+    transition-duration: 1s;
+    height: 100vh;
+    width: 75%;
+    top: 0;
+    left: 50%;
+    background-color: #0e7adf;
+    position: fixed;
+    padding: 70px 70px 50px 40px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .hamburger.active #menu {
+    display: none;
+  }
+  .hamburger.active #close {
+    display: flex;
+    color: #fff;
+    z-index: 11;
+    cursor: pointer;
+  }
+}
+
+/* Responsive   Mobile */
+@media (max-width: 460px) {
+  .navbar.active {
+    display: flex;
+    z-index: 99999;
+  }
+  .user-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .user-icon i {
+    font-size: 0.8rem;
+  }
+  .nav-links {
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    width: 75%;
+    transform: translateX(100%);
+    transition-duration: 1s;
+    background-color: #0e7adf;
+    position: fixed;
+    z-index: 10;
+    padding: 70px 70px 50px 40px;
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+    color: #fff;
+  }
+  .nav-links a.active {
+    border-bottom: solid 2px #fff;
+  }
+
+  .nav-links.active {
+    transform: translateX(-25%);
+    transition-duration: 1s;
+    height: 100vh;
+    width: 75%;
+    background-color: #0e7adf;
+    position: fixed;
+    padding: 70px 70px 50px 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.356);
+  }
+
+  .navbar .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .hamburger.active #menu {
+    display: none;
+  }
+  .hamburger.active #close {
+    display: flex;
+    color: #fff;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+  .logo .plasahosting {
+    width: 90px;
+    height: auto;
+  }
+}
+/* end navbar */
+
+/* START MAIN */
+.main-section {
+  width: 100%;
+}
+.desc-plasahosting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 60px 30px 60px;
+}
+
+.desc-plasahosting .deskripsi {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.desc-plasahosting .deskripsi h1 {
+  color: #0389ff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.desc-plasahosting .deskripsi p {
+  color: #565558;
+  font-size: 1.2rem;
+}
+
+.desc-plasahosting .deskripsi p span {
+  color: #565558;
+  font-weight: 700;
+}
+.desc-plasahosting img {
+  width: 500px;
+  height: auto;
+}
+.main-section .quote {
+  width: 100%;
+  padding: 20px 30px 20px 30px;
+  background-color: #e1e7ec;
+  margin-bottom: 2.5rem;
+}
+.main-section .quote h1 {
+  font-weight: 600;
+  color: #0389ff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.main-section .history-plasahosting {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/image/gedung.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 40px;
+}
+.main-section .history-plasahosting .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #1f1f20;
+  opacity: 73%;
+}
+
+.main-section .history-plasahosting h1 {
+  color: #fff;
+  font-weight: 600;
+  z-index: 999;
+  font-size: 2rem;
+}
+.main-section .desc-history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main-section .history-plasahosting .desc-history p {
+  color: #fff;
+  z-index: 999;
+  text-align: center;
+  font-weight: 400;
+  opacity: 90%;
+  font-size: 1.2rem;
+  text-shadow: 0 0 15px #000000;
+}
+.main-section .section-why-plasahosting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  gap: 20px;
+}
+.main-section .section-why-plasahosting img {
+  width: 450px;
+  height: auto;
+}
+.main-section .section-why-plasahosting .desc-why-plasahosting h1 {
+  color: #0389ff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.main-section .section-why-plasahosting .desc-why-plasahosting p {
+  color: #565558;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.main-section .server {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 30px;
+  padding: 60px 0px 60px 6rem;
+  position: relative;
+}
+
+.main-section .server img {
+  width: 550px;
+  height: auto;
+  position: absolute;
+  right: 0;
+}
+
+.main-section .server .desc-server {
+  width: 50%;
+}
+
+.main-section .server .desc-server h1 {
+  color: #0389ff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.main-section .server .desc-server p {
+  color: #565558;
+  font-size: 1.2rem;
+  padding-right: 3rem;
+}
+
+.main-section .domain-murah {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 50px 40px;
+}
+
+.main-section .domain-murah img {
+  width: 450px;
+}
+
+.main-section .domain-murah .background-domain-murah {
+  width: 570px;
+  height: 400px;
+  background-image: linear-gradient(
+    to right,
+    rgb(3, 137, 255),
+    rgb(5, 66, 120)
+  );
+  position: absolute;
+  right: 0;
+  border-radius: 10rem 0 0 10rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+  box-shadow: 4px 1.5px 15px rgba(5, 66, 120, 0.849);
+}
+.main-section .domain-murah .background-domain-murah .title {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: right;
+}
+.main-section .domain-murah .background-domain-murah p {
+  font-size: 14px;
+  text-align: right;
+  color: #fff;
+  font-weight: 400;
+}
+ .main-section .domain-murah .background-domain-murah .cards-diskon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon {
+    width: 100%;
+    height: 100px;
+    border: solid 3px #fff;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    h1 {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    p {
+    font-size: 12px;
+    text-align: center;
+    color: #f2ff3a;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    span {
+    font-size: 12px;
+    text-align: center;
+    text-decoration: line-through;
+    color: #f2ff3a;
+  }
+   .main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
+    background-color: #fff;
+    font-size: 14px;
+    color: #0389ff;
+    font-weight: 700;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5rem;
+    width: max-content;
+  }
+
+@media (max-width: 976px) {
+  .main-section .history-plasahosting {
+    padding: 40px 30px;
+  }
+  .desc-plasahosting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px 30px 35px;
+  }
+  .desc-plasahosting .deskripsi {
+    width: 50%;
+  }
+  .desc-plasahosting .deskripsi h1 {
+    font-size: 1.3rem;
+  }
+  .desc-plasahosting .deskripsi p {
+    font-size: 16px;
+  }
+  .desc-plasahosting .deskripsi p span {
+    color: #565558;
+    font-weight: 700;
+  }
+  .desc-plasahosting img {
+    width: 400px;
+    height: auto;
+  }
+  .main-section .history-plasahosting h1 {
+    font-size: 1.5rem;
+  }
+  .main-section .history-plasahosting .desc-history p {
+    font-size: 16px;
+  }
+  .main-section .section-why-plasahosting {
+    padding: 60px 40px;
+    gap: 20px;
+  }
+  .main-section .section-why-plasahosting .desc-why-plasahosting p {
+    font-size: 16px;
+  }
+  .main-section .server {
+    padding: 50px ;
+  }
+  .main-section .server img {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    right: 0;
+  }
+  .main-section .server .desc-server p {
+    color: #565558;
+    font-size: 1.2rem;
+    padding-right: 0;
+  }
+  .main-section .domain-murah  {
+    margin-bottom: 5rem;
+}
+  .main-section .domain-murah img {
+    width: 300px;
+}
+.main-section .domain-murah .background-domain-murah {
+  width: 450px;
+  height: auto;
+}
+.main-section .domain-murah .background-domain-murah .cards-diskon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .main-section .history-plasahosting {
+    padding: 40px 30px;
+  }
+  .desc-plasahosting {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px 30px 35px;
+  }
+  .desc-plasahosting .deskripsi {
+    width: 100%;
+    gap: 30px;
+  }
+  .desc-plasahosting .deskripsi h1 {
+    font-size: 1.5rem;
+  }
+  .desc-plasahosting .deskripsi p {
+    font-size: 14px;
+  }
+  .desc-plasahosting .deskripsi p span {
+    color: #565558;
+    font-weight: 700;
+  }
+  .desc-plasahosting img {
+    width: 400px;
+    height: auto;
+  }
+  .main-section .quote h1 {
+    font-size: 1.3rem;
+  }
+  .main-section .history-plasahosting h1 {
+    font-size: 1.5rem;
+  }
+  .main-section .history-plasahosting .desc-history p {
+    font-size: 14px;
+  }
+  .main-section .section-why-plasahosting {
+    flex-direction: column-reverse;
+    padding: 60px 40px;
+    gap: 20px;
+  }
+  .main-section .section-why-plasahosting .desc-why-plasahosting p {
+    font-size: 14px;
+  }
+  .main-section .server {
+    justify-content: start;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    padding: 60px 30px 60px 30px;
+    position: relative;
+    height: 700px;
+    margin-bottom: 50px;
+  }
+  .main-section .server img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    height: auto;
+  }
+  .main-section .server .desc-server h1 {
+    font-size: 1.5rem;
+  }
+  .main-section .server .desc-server p {
+    font-size: 16px;
+  }
+  .main-section .server .desc-server {
+    width: 100%;
+  }
+   .main-section .domain-murah {
+    padding: 1rem;
+  }
+  .main-section .domain-murah img {
+    display: none;
+  }
+  .main-section .domain-murah .background-domain-murah {
+    border-radius: 3rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 4px 1.5px 15px rgba(5, 66, 120, 0.849);
+    background-image: linear-gradient(
+      to top,
+      rgb(3, 137, 255),
+      rgb(5, 66, 120)
+    );
+  }
+  .main-section .domain-murah .background-domain-murah .title {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  .main-section .domain-murah .background-domain-murah p {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+  }
+  .main-section .domain-murah .background-domain-murah .cards-diskon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon {
+    width: 100%;
+    height: 100px;
+    border: solid 3px #fff;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    h1 {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    span {
+    font-size: 12px;
+    text-align: center;
+    text-decoration: line-through;
+    color: #f2ff3a;
+  }
+  .main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
+    background-color: #fff;
+    font-size: 14px;
+    color: #0389ff;
+    font-weight: 700;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5rem;
+    width: max-content;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .main-section .history-plasahosting {
+    padding: 40px 30px;
+  }
+  .desc-plasahosting {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 35px 30px 35px;
+  }
+  .desc-plasahosting .deskripsi {
+    width: 100%;
+    gap: 20px;
+  }
+  .desc-plasahosting .deskripsi h1 {
+    font-size: 1.3rem;
+  }
+  .desc-plasahosting .deskripsi p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .desc-plasahosting .deskripsi p span {
+    color: #565558;
+    font-weight: 700;
+  }
+  .desc-plasahosting img {
+    width: 350px;
+    height: auto;
+  }
+  .main-section .quote h1 {
+    font-size: 1.2rem;
+  }
+  .main-section .history-plasahosting h1 {
+    font-size: 1.3rem;
+  }
+  .main-section .history-plasahosting .desc-history p {
+    font-size: 14px;
+  }
+  .main-section .section-why-plasahosting {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .main-section .section-why-plasahosting img {
+    width: 300px;
+    height: auto;
+  }
+  .main-section .section-why-plasahosting .desc-why-plasahosting h1 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .main-section .section-why-plasahosting .desc-why-plasahosting p {
+    font-size: 14px;
+  }
+  .main-section .server {
+    justify-content: start;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    padding: 60px 30px 60px 30px;
+    position: relative;
+    height: 650px;
+    margin-bottom: 50px;
+  }
+  .main-section .server img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: auto;
+  }
+  .main-section .server .desc-server h1 {
+    font-size: 1.3rem;
+  }
+  .main-section .server .desc-server p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .main-section .domain-murah {
+    padding: 1rem;
+  }
+  .main-section .domain-murah img {
+    display: none;
+  }
+  .main-section .domain-murah .background-domain-murah {
+    border-radius: 3rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 4px 1.5px 15px rgba(5, 66, 120, 0.849);
+    background-image: linear-gradient(
+      to top,
+      rgb(3, 137, 255),
+      rgb(5, 66, 120)
+    );
+  }
+  .main-section .domain-murah .background-domain-murah .title {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  .main-section .domain-murah .background-domain-murah p {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+  }
+  .main-section .domain-murah .background-domain-murah .cards-diskon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon {
+    width: 100%;
+    height: 100px;
+    border: solid 3px #fff;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    h1 {
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .main-section
+    .domain-murah
+    .background-domain-murah
+    .cards-diskon
+    .card-diskon
+    span {
+    font-size: 12px;
+    text-align: center;
+    text-decoration: line-through;
+    color: #f2ff3a;
+  }
+  .main-section .domain-murah .background-domain-murah .btn-beli-domain-now {
+    background-color: #fff;
+    font-size: 14px;
+    color: #0389ff;
+    font-weight: 700;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5rem;
+    width: max-content;
+  }
+}
+
+/* END MAIN */
+
+/* START FOOTER */
+.footer {
+  background: #0080ff;
+  color: white;
+  padding: 4rem 6rem 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-col {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 2rem 1rem;
+  }
+
+  .footer-col {
+    flex: 0 0 100%;
+  }
+}
+/* END FOOTER */
