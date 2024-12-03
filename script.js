@@ -22,12 +22,16 @@ document.addEventListener("click", function (e) {
 
 // END NAVBAR
 
+
+
 // Start Hero Js
 document.querySelector('.hero-button').addEventListener('click', () => {
     alert('Navigating to Get Started section!');
   });
   
 
+
+  
 // START FEATURE
 // Add animation on scroll
 const cards = document.querySelectorAll('.feature-card');
@@ -83,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 100);
 });
 // END SEARCH DOMAIN HOME
+
+
 
 // START SERVICES HOSTING HOME
 // Add hover effect animation

@@ -694,11 +694,11 @@ body {
 
 @media (max-width: 600px) {
   .domain-title {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .domain-description {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .domain-name {
@@ -855,7 +855,7 @@ body {
 /* Responsif */
 @media (max-width: 600px) {
   .transfer-domain-title {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .transfer-domain-description {
@@ -873,7 +873,7 @@ body {
 /* Start ajakan beli domain */
 /* Section Mengapa Harus Plasa Hosting */
 .why-choose-us-section {
-  padding: 60px 20px;
+  padding: 1px 1px 100px;
   background-color: #ffffff;
   color: #333333;
   overflow: hidden; /* Untuk mencegah konten keluar saat animasi */
@@ -883,9 +883,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 100px;
   opacity: 0; /* Awal tidak terlihat */
   transform: translateX(-50px); /* Awal bergeser ke kiri */
   transition: all 0.8s ease-in-out; /* Animasi */
@@ -901,7 +901,7 @@ body {
 }
 
 .why-choose-us-title {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: #0072ff;
   margin-bottom: 20px;
@@ -921,7 +921,9 @@ body {
 }
 
 .why-choose-us-image img {
-  max-width: 70%;
+  max-width: 100%;
+  height: 400px;
+  width: 400px;
   height: auto;
   cursor: pointer;
 }
@@ -935,38 +937,33 @@ body {
   .why-choose-us-container {
     flex-direction: column;
     text-align: center;
+    padding: 1rem 1rem ;
+    gap: 20px;
   }
 
-  .why-choose-us-image {
-    margin-top: 20px;
+  .why-choose-us-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0072ff;
+    margin-bottom: 20px;
+  }
+
+  .why-choose-us-description {
+    font-size: 14px;
+    color: #555555;
+  }
+
+  .why-choose-us-image img {
+    max-width: 100%;
+    height: 300px;
+    width: 300px;
+    height: auto;
+    cursor: pointer;
   }
 }
 
 /* End ajakan beli domain */
 
-.social-media {
-  list-style: none;
-  padding: 0;
-}
-
-.social-media li {
-  display: inline-block;
-  margin: 0 10px;
-}
-/* End FAQ */
-
-@media (max-width: 600px) {
-  .domain-search {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .domain-search #domain-name,
-  .domain-search #domain-extension,
-  .domain-search #check-domain {
-    width: 100%;
-  }
-}
 
 /* Start FAQ STYle */
 .faq-section {
@@ -981,13 +978,13 @@ body {
 }
 
 .faq-title {
-  color: #0080ff;
-  font-size: 2.5rem;
+  color: #0080FF;
+  font-size: 45px;
   margin-bottom: 0.5rem;
 }
 
 .faq-subtitle {
-  color: #0080ff;
+  color: #0080FF;
   margin-bottom: 1rem;
 }
 
@@ -998,7 +995,7 @@ body {
 
 .faq-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 100px;
   display: block;
 }
 
@@ -1033,11 +1030,24 @@ body {
   max-height: 500px;
 }
 
+@media (max-width: 768px) {
+.faq-image {
+  width: 50%;
+  max-width: 80px;
+  display: block;
+}
+
+.faq-title {
+color: #0080FF;
+font-size: 30px;
+}
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .faq-section {
-    flex-direction: column;
-    padding: 3rem;
+      flex-direction: column;
+      padding: 3rem;
   }
 }
 
