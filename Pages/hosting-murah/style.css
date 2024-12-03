@@ -177,6 +177,9 @@ body {
   color: #fff;
   z-index: 11;
   cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 }
@@ -251,6 +254,9 @@ body {
   color: #fff;
   z-index: 11;
   cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
   .logo .plasahosting {
@@ -271,6 +277,7 @@ body {
     transform: translateX(0);
   }
 }
+
 
 .hero-section {
   width: 100%;
@@ -516,8 +523,9 @@ body {
 }
 .main-section .packages {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 80px;
+  width: 100%;
 }
 
 /* Gaya awal untuk animasi */
@@ -533,8 +541,9 @@ body {
 }
 
 .main-section .packages .card-package {
-  width: 358px;
-  height: 663px;
+  width: 100%;
+  max-width: 350px;
+  height: 600px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 25%);
   border-radius: 20px;
   padding: 171px 50px 10px;
@@ -546,6 +555,7 @@ body {
   align-items: center;
   transition-duration: 800ms;
   animation: fadeInUp 1s ease-in-out;
+  margin: auto;
 }
 .main-section .packages .card-package:hover {
   transform: translateY(-15px);
@@ -726,20 +736,23 @@ body {
   }
   .main-section .packages {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 60px;
+    width: 100%;
   }
   .main-section .packages .card-package {
-    height: 400px;
+    width: 400px;
+    height: 600px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 25%);
     border-radius: 20px;
-    padding: 100px 20px 10px;
+    padding: 171px 50px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: start;
     align-items: center;
+    margin: auto;
   }
   .main-section .packages .card-package .header-card {
     background-color: #0389ff;
@@ -748,7 +761,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     text-align: center;
-    padding: 30px 10px;
+    padding: 40px 10px;
     border-radius: 20px 20px 40px 40px;
     position: absolute;
     width: 100%;
@@ -832,22 +845,20 @@ body {
   }
   .main-section .packages {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
   }
   .main-section .packages .card-package {
-    width: 250px;
-    max-width: 300px;
-    height: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 25%);
     border-radius: 20px;
-    padding: 100px 20px 10px;
+    padding: 171px 50px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: start;
     align-items: center;
+    margin: auto;
   }
   .main-section .packages .card-package .header-card {
     background-color: #0389ff;
@@ -856,7 +867,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     text-align: center;
-    padding: 30px 10px;
+    padding: 40px 10px;
     border-radius: 20px 20px 40px 40px;
     position: absolute;
     width: 100%;
@@ -946,20 +957,21 @@ body {
   }
   .main-section .packages {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
   }
   .main-section .packages .card-package {
-    height: 400px;
+    height: 600px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 25%);
     border-radius: 20px;
-    padding: 100px 20px 10px;
+    padding: 171px 50px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: start;
     align-items: center;
+    margin: auto;
   }
   .main-section .packages .card-package .header-card {
     background-color: #0389ff;
@@ -968,7 +980,7 @@ body {
     font-weight: 600;
     font-size: 14px;
     text-align: center;
-    padding: 30px 10px;
+    padding: 40px 10px;
     border-radius: 20px 20px 40px 40px;
     position: absolute;
     width: 100%;
