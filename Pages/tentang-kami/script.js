@@ -59,3 +59,127 @@ document.addEventListener("click", function (e) {
   observer.observe(quoteElement);
 // END MAIN
 
+// ANIMATION ON SCROL IN PACKAGES
+
+const deskripsi = document.querySelectorAll(".deskripsi");
+const historyPlasahosting = document.querySelectorAll(".history-plasahosting");
+const descWhy = document.querySelectorAll(".desc-why-plasahosting");
+const server = document.querySelectorAll(".server");
+const domainMurah = document.querySelectorAll(".domain-murah");
+const contentLayanan = document.querySelectorAll(".layanan-utama");
+const titleQuestion = document.querySelectorAll(".title-question");
+const formQuestion = document.querySelectorAll(".form");
+
+const observerOptions = {
+  threshold: 0.1,
+};
+
+const obser = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log("apa itu entri", entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add("Left-in");
+    }
+  });
+}, observerOptions);
+
+
+deskripsi.forEach((desc) => {
+  desc.classList.add("Left-init");
+  obser.observe(desc);
+});
+
+const riwayatPlasahosting = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("bottom-in");
+    }
+  });
+}, observerOptions);
+
+historyPlasahosting.forEach((riwayat) => {
+  riwayat.classList.add("bottom-init");
+  riwayatPlasahosting.observe(riwayat);
+});
+
+
+const kenapaPlasahosting = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("right-in");
+    }
+  });
+}, observerOptions);
+
+descWhy.forEach((kenapa) => {
+  kenapa.classList.add("right-init");
+  kenapaPlasahosting.observe(kenapa);
+});
+
+
+const serverPlasahosting = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("right-in");
+    }
+  });
+}, observerOptions);
+
+server.forEach((serverMe) => {
+  serverMe.classList.add("right-init");
+  serverPlasahosting.observe(serverMe);
+});
+
+
+const domainMurahPlasahosting = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("bottom-in");
+    }
+  });
+}, observerOptions);
+
+domainMurah.forEach((domain) => {
+  domain.classList.add("bottom-init");
+  domainMurahPlasahosting.observe(domain);
+});
+
+const layanan = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("bottom-in");
+    }
+  });
+}, observerOptions);
+
+contentLayanan.forEach((content) => {
+  content.classList.add("bottom-init");
+  layanan.observe(content);
+});
+
+
+const questiontitle = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("bottom-in");
+    }
+  });
+}, observerOptions);
+
+titleQuestion.forEach((question) => {
+  question.classList.add("bottom-init");
+  questiontitle.observe(question);
+});
+
+const form = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("bottom-in");
+    }
+  });
+}, observerOptions);
+
+formQuestion.forEach((formpertanyaan) => {
+  formpertanyaan.classList.add("bottom-init");
+  form.observe(formpertanyaan);
+});

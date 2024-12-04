@@ -354,6 +354,53 @@ body {
   }
 }
 
+/* Gaya awal untuk animasi */
+.bottom-init {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 1s ease;
+}
+/* Gaya saat elemen terlihat */
+.bottom-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-init {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.7s ease, transform 1s ease;
+}
+/* Gaya saat elemen terlihat */
+.top-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gaya awal untuk animasi */
+.right-init {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+/* Gaya saat elemen terlihat */
+.right-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Gaya awal untuk animasi */
+.Left-init {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.5s ease, transform 1s ease;
+}
+/* Gaya saat elemen terlihat */
+.Left-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .main-section {
   width: 100%;
 }
@@ -371,7 +418,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  animation: fadeInLeft 1s ease-in-out;
 }
 
 .desc-plasahosting .deskripsi h1 {
@@ -445,7 +491,7 @@ body {
   font-weight: 600;
   z-index: 999;
   font-size: 2rem;
-  animation: fadeInTop 1s ease-in-out;
+  /* animation: fadeInTop 1s ease-in-out; */
 }
 
 .main-section .desc-history {
@@ -464,7 +510,7 @@ body {
   text-shadow: 0 0 15px #000000;
 }
 
-.main-section .history-plasahosting .desc-history p:nth-child(1){
+/* .main-section .history-plasahosting .desc-history p:nth-child(1){
   animation: fadeInTop 1s ease-in-out;
 }
 .main-section .history-plasahosting .desc-history p:nth-child(2){
@@ -472,7 +518,7 @@ body {
 }
 .main-section .history-plasahosting .desc-history p:nth-child(3){
   animation: fadeInRight 1s ease-in-out;
-}
+} */
 
 .main-section .section-why-plasahosting {
   display: flex;
@@ -493,14 +539,12 @@ body {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  animation: fadeInLeft 1s ease-in-out;
 }
 
 .main-section .section-why-plasahosting .desc-why-plasahosting p {
   color: #565558;
   text-align: center;
   font-size: 1.2rem;
-  animation: fadeInLeft 1s ease-in-out;
 }
 
 .main-section .server {
@@ -518,12 +562,10 @@ body {
   height: auto;
   position: absolute;
   right: 0;
-  animation: fadeInRight 1s ease-in-out;
 }
 
 .main-section .server .desc-server {
   width: 50%;
-  animation: fadeInLeft 1s ease-in-out;
 }
 
 .main-section .server .desc-server h1 {
@@ -673,7 +715,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  animation: fadeInBottom 1s ease-in-out;
 }
 
 .main-section .layanan .content-layanan .layanan-utama {
@@ -726,13 +767,11 @@ body {
   text-align: center;
   font-size: 2rem;
   color: #0389ff;
-  animation: fadeInBottom 1s ease-in-out;
 }
 
 .main-section .form-question .title-question p {
   text-align: center;
   font-size: 16px;
-  animation: fadeInBottom 1s ease-in-out;
 }
 
 .main-section .form-question .content-question {
@@ -758,7 +797,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  animation: fadeInBottom 1s ease-in-out;
 }
 
 .main-section .form-question .content-question .form input {
