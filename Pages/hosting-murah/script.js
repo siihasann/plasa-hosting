@@ -31,19 +31,20 @@ document.querySelector(".button-fitur").onclick = () => {
 
   modal.classList.toggle("active");
 
- if (modal.classList.contains("active")) {
-   icon.classList.remove("fa-angle-up");
-   icon.classList.add("fa-angle-down");
- } else {
-   icon.classList.remove("fa-angle-down");
-   icon.classList.add("fa-angle-up");
- }
+  if (modal.classList.contains("active")) {
+    icon.classList.remove("fa-angle-up");
+    icon.classList.add("fa-angle-down");
+  } else {
+    icon.classList.remove("fa-angle-down");
+    icon.classList.add("fa-angle-up");
+  }
 };
 // end modal-fitur
 
 // ANIMATION ON SCROL IN PACKAGES
 
 const cards = document.querySelectorAll(".card-package");
+const title = document.querySelectorAll(".main-title");
 
 const observerOptions = {
   threshold: 0.1,
@@ -58,8 +59,15 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 cards.forEach((card) => {
-   card.classList.add("animate-init");
+  card.classList.add("animate-init");
+
   observer.observe(card);
+});
+
+title.forEach((judul) => {
+  judul.classList.add("animate-init");
+
+  observer.observe(judul);
 });
 
 // CODE KETIKA ROUTE ACTIVE
