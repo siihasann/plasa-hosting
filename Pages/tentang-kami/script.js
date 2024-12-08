@@ -76,7 +76,6 @@ const observerOptions = {
 
 const obser = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log("apa itu entri", entry)
     if (entry.isIntersecting) {
       entry.target.classList.add("Left-in");
     }
