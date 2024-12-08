@@ -580,6 +580,7 @@
     border: 2px solid #000000;
     background-color: #0389ff;
     border-radius: 100%;
+    min-width: 45px;
     width: 45px;
     height: 45px;
     display: flex;
@@ -595,7 +596,7 @@
   .main-section .tata-cara .content .langkah .content-langkah p{
     font-weight: 500;
     font-size: 14px;
-    width: 90%;
+    width: 100%;
   }
 
 @media (max-width:976px){
@@ -642,6 +643,7 @@
     border: 2px solid #000000;
     background-color: #0389ff;
     border-radius: 100%;
+    min-width: 45px;
     width: 45px;
     height: 45px;
     display: flex;
@@ -657,7 +659,11 @@
   .main-section .tata-cara .content .langkah .content-langkah p{
     font-weight: 500;
     font-size: 14px;
-    width: 80%;
+    width: 100%;
+  }
+  .main-section .pembayaran .virtual-account {
+    padding: 50px 5rem;
+    gap: 5rem;
   }
 }
   @media (max-width: 768px) {
@@ -675,6 +681,7 @@
       padding-top: 2rem;
     }
     .main-section .pembayaran .virtual-account {
+      padding: 50px 4rem;
       gap: 5rem;
     }
     .main-section .pembayaran .virtual-account .image {
@@ -697,6 +704,7 @@
       border: 2px solid #000000;
       background-color: #0389ff;
       border-radius: 50px;
+      min-width: 30px;
       width: 30px;
       height: 30px;
       display: flex;
@@ -706,7 +714,7 @@
      .main-section .tata-cara .content .langkah .content-langkah p{
       font-weight: 500;
       font-size: 12px;
-      width: 80%;
+      width: 100%;
     }
   }
   @media (max-width: 460px) {
@@ -777,6 +785,7 @@
       border: 2px solid #000000;
       background-color: #0389ff;
       border-radius: 50px;
+      min-width: 30px;
       width: 30px;
       height: 30px;
       display: flex;
@@ -791,7 +800,7 @@
     .main-section .tata-cara .content .langkah .content-langkah p{
       font-weight: 400;
       font-size: 12px;
-      width: 75%;
+      width: 100%;
     }
   }
 
