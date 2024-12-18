@@ -12,10 +12,11 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- Start Navbar -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -27,10 +28,76 @@
       <div class="parent-navigation">
         <div class="navigation">
           <ul class="nav-links">
-            <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">Hosting</a>
-            <a href="../../../plasa-hosting/Pages/domain/index.html">Domain</a>
-            <a href="../../../plasa-hosting/Pages/web/index.html">Website</a>
-            <a href="#">Blog</a>
+            <!-- Dropdown Hosting -->
+            <li class="dropdown">
+              <a>
+                Hosting
+                <span class="dropdown-icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Hosting Murah</span>
+                      <p class="dropdown-description">Solusi hosting terjangkau untuk pemula</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-rocket"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Hosting Bisnis</span>
+                      <p class="dropdown-description">Performa tinggi untuk bisnis anda</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-star"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Hosting Premium</span>
+                      <p class="dropdown-description">Layanan hosting kelas atas</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Dropdown Domain -->
+            <li class="dropdown">
+              <a>
+                Domain
+                <span class="dropdown-icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../../plasa-hosting/Pages/domain/index.html">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Domain Murah</span>
+                      <p class="dropdown-description">Nama domain terjangkau</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-crown"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Transfer Domain</span>
+                      <p class="dropdown-description">Domain berkualitas tinggi</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../../../plasa-hosting/Pages/web/index.html"> Website</a></li>
+            <li><a href="#"></i> Blog</a></li>
           </ul>
         </div>
         <div class="login">
@@ -47,6 +114,7 @@
       </div>
     </nav>
   </header>
+  <!-- End Navbar -->
 
   <!-- Hero Section -->
   <section class="hero">
@@ -58,8 +126,7 @@
       <div class="hero__content">
         <h1 class="hero__title">Cari Domainmu Sekarang</h1>
         <p class="hero__description">
-          Pilih nama dan ketersediaan domain untuk websitemu dengan Plasa
-          Hosting.
+          Pilih nama dan ketersediaan domain untuk websitemu dengan Plasa Hosting.
         </p>
 
         <div class="domain-search">
@@ -67,7 +134,7 @@
             <div class="domain-search__input-group">
               <div class="domain-search__input-wrapper">
                 <input type="text" class="domain-search__input" id="domainInput" placeholder="Masukan nama domainmu..."
-                  autocomplete="off" spellcheck="false" />
+                  autocomplete="off" spellcheck="false">
                 <div class="domain-search__input-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -120,85 +187,56 @@
   <!-- Section Ekstensi Domain -->
   <section class="domain-section">
     <div class="domain-container">
-      <h2 class="domain-title">
-        Pilih Ekstensi Domain yang Sesuai dengan Bisnis Anda
-      </h2>
+      <h2 class="domain-title">Pilih Ekstensi Domain yang Sesuai dengan Bisnis Anda</h2>
       <p class="domain-description">
-        Plasa Hosting menyediakan berbagai pilihan ekstensi domain dengan
-        harga terjangkau.<br />
+        Plasa Hosting menyediakan berbagai pilihan ekstensi domain dengan harga terjangkau.<br>
         Pilih domain Anda dan segera daftarkan sebelum diambil orang lain!
       </p>
-    </div>
-    <div class="domain-cards">
-      <div class="domain-card">
-        <h3 class="domain-name">.com</h3>
-        <p class="domain-discount"><span>Rp 150.000</span> diskon 50%</p>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.net</h3>
-        <p class="domain-price">Rp 100.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.go</h3>
-        <p class="domain-discount"><span>Rp 150.000</span> diskon 50%</p>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.org</h3>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.biz</h3>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.info</h3>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.name</h3>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-      <div class="domain-card">
-        <h3 class="domain-name">.tv</h3>
-        <p class="domain-price">Rp 75.000</p>
-        <button class="domain-button">Daftarkan Sekarang</button>
-      </div>
-    </div>
-    </div>
-  </section>
-  <!-- End ajakan beli domain -->
-
-  <!-- Start FAQ -->
-  <section class="faq-section">
-    <div class="faq-left">
-      <h2 class="faq-title">FAQ</h2>
-      <h3 class="faq-subtitle">(Frequently Asked Questions)</h3>
-      <p class="faq-description">Pertanyaan yang sering ditanyakan customer Plasa Hosting</p>
-      <img src="./../../image/faq-img.png" alt="FAQ Illustration" class="faq-image">
-    </div>
-
-    <div class="faq-right">
-      <div class="faq-item">
-        <div class="faq-question">
-          Bagaimana cara membeli layanan hosting dan domain di sini?
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
+      <div class="domain-cards">
+        <div class="domain-card">
+          <h3 class="domain-name">.com</h3>
+          <p class="domain-discount"><span>Rp 150.000</span> diskon 50%</p>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
         </div>
-        <div class="faq-answer">
-          Anda dapat membeli layanan hosting dan domain melalui website kami dengan mengikuti langkah-langkah
-          yang mudah.
+        <div class="domain-card">
+          <h3 class="domain-name">.net</h3>
+          <p class="domain-price">Rp 100.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
+        </div>
+        <div class="domain-card">
+          <h3 class="domain-name">.go</h3>
+          <p class="domain-discount"><span>Rp 150.000</span> diskon 50%</p>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
+        </div>
+        <div class="domain-card">
+          <h3 class="domain-name">.org</h3>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
+        </div>
+        <div class="domain-card">
+          <h3 class="domain-name">.biz</h3>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
+        </div>
+        <div class="domain-card">
+          <h3 class="domain-name">.info</h3>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
+        </div>
+        <div class="domain-card">
+          <h3 class="domain-name">.name</h3>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
+        </div>
+        <div class="domain-card">
+          <h3 class="domain-name">.tv</h3>
+          <p class="domain-price">Rp 75.000</p>
+          <button class="domain-button">Daftarkan Sekarang</button>
         </div>
       </div>
+    </div>
   </section>
   <!-- end domain ekstension -->
 
@@ -239,9 +277,8 @@
     <div class="transfer-domain-container">
       <h2 class="transfer-domain-title">Transfer Domain</h2>
       <p class="transfer-domain-description">
-        Nikmati layanan hosting terbaik dan dukungan teknis 24/7 dengan
-        mentransfer domain Anda ke layanan kami. Proses transfer mudah, cepat,
-        dan tanpa gangguan!
+        Nikmati layanan hosting terbaik dan dukungan teknis 24/7 dengan mentransfer domain Anda ke layanan kami. Proses
+        transfer mudah, cepat, dan tanpa gangguan!
       </p>
       <button class="transfer-domain-button" onclick="handleTransferClick()">
         Transfer Domain
@@ -256,11 +293,9 @@
       <div class="why-choose-us-text">
         <h2 class="why-choose-us-title">Mengapa Harus Plasa Hosting?</h2>
         <p class="why-choose-us-description">
-          Dengan layanan Domain Murah kami, Anda bisa memiliki nama domain
-          yang sesuai untuk bisnis, blog, atau proyek pribadi Anda tanpa
-          menguras kantong. Kami menawarkan berbagai pilihan ekstensi domain
-          populer dengan harga yang sangat terjangkau, didukung dengan fitur
-          keamanan dan layanan teknis 24/7. Temukan nama domain unik dan
+          Dengan layanan Domain Murah kami, Anda bisa memiliki nama domain yang sesuai untuk bisnis, blog, atau proyek
+          pribadi Anda tanpa menguras kantong. Kami menawarkan berbagai pilihan ekstensi domain populer dengan harga
+          yang sangat terjangkau, didukung dengan fitur keamanan dan layanan teknis 24/7. Temukan nama domain unik dan
           mulailah memperkuat identitas online Anda bersama kami.
         </p>
       </div>
@@ -276,10 +311,8 @@
     <div class="faq-left">
       <h2 class="faq-title">FAQ</h2>
       <h3 class="faq-subtitle">(Frequently Asked Questions)</h3>
-      <p class="faq-description">
-        Pertanyaan yang sering ditanyakan customer Plasa Hosting
-      </p>
-      <img src="../../image/faq-image.png" alt="FAQ Illustration" class="faq-image" />
+      <p class="faq-description">Pertanyaan yang sering ditanyakan customer Plasa Hosting</p>
+      <img src="./../../image/faq-img.png" alt="FAQ Illustration" class="faq-image">
     </div>
 
     <div class="faq-right">
@@ -291,8 +324,8 @@
           </svg>
         </div>
         <div class="faq-answer">
-          Anda dapat membeli layanan hosting dan domain melalui website kami
-          dengan mengikuti langkah-langkah yang mudah.
+          Anda dapat membeli layanan hosting dan domain melalui website kami dengan mengikuti langkah-langkah
+          yang mudah.
         </div>
       </div>
 
@@ -304,8 +337,7 @@
           </svg>
         </div>
         <div class="faq-answer">
-          Kami menyediakan control panel yang mudah digunakan untuk mengelola
-          domain dan hosting Anda.
+          Kami menyediakan control panel yang mudah digunakan untuk mengelola domain dan hosting Anda.
         </div>
       </div>
 
@@ -317,118 +349,118 @@
           </svg>
         </div>
         <div class="faq-answer">
-          Ya, kami menyediakan berbagai fitur keamanan termasuk SSL, firewall,
-          dan backup regular.
+          Ya, kami menyediakan berbagai fitur keamanan termasuk SSL, firewall, dan backup regular.
         </div>
       </div>
     </div>
   </section>
   <!-- END FAQ -->
 
-   <!--START FOOTER -->
-   <footer class="footer">
+  <!--START FOOTER -->
+  <footer class="footer">
     <div class="content-footer">
-        <div class="footer-col-1">
-            <img src="../../image/logo-plasahosting.png" alt="">
-            <div class="alamat">
-                <h1>Surakarta</h1>
-                <p>Jl. Letjen Sutoyo No.43
-                    Jawa Tengah 57135
-                    Telp. (+62) 85865412191</p>
-            </div>
-            <div class="alamat">
-                <h1>Jakarta</h1>
-                <p>Jl. Letjen Sutoyo No.43
-                    Jawa Tengah 57135
-                    Telp. (+62) 85865412191</p>
-            </div>
-            <img src="../../image/support.png" class="support" alt="image-support">
+      <div class="footer-col-1">
+        <img src="../../image/logo-plasahosting.png" alt="">
+        <div class="alamat">
+          <h1>Surakarta</h1>
+          <p>Jl. Letjen Sutoyo No.43
+            Jawa Tengah 57135
+            Telp. (+62) 85865412191</p>
         </div>
-        <div class="footer-col-2">
-            <div class="hosting">
-                <h1>HOSTING</h1>
-                <div class="content-hosting">
-                    <a href="../../../plasa-hosting/Pages/web/index.html">Web Hosting</a>
-                    <a href="">Wordpress</a>
-                    <a href="">VPS Hosting</a>
-                    <a href="">Cloud Hosting</a>
-                    <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">Hosting Murah</a>
-                    <a href="../../../plasa-hosting/Pages/web/index.html">Jasa Pembuatan Website</a>
-                    <a href="">Google Workspace</a>
-                </div>
-            </div>
-            <div class="perusahaan">
-                <h1>PERUSAHAAN</h1>
-                <div class="content-perusahaan">
-                    <a href="../../../plasa-hosting/Pages/tentang-kami/index.html">Tentang plasahosting</a>
-                    <a href="">Data Center</a>
-                    <a href="">VPS Hosting</a>
-                    <a href="">Term Of Service</a>
-                </div>
-            </div>
+        <div class="alamat">
+          <h1>Jakarta</h1>
+          <p>Jl. Letjen Sutoyo No.43
+            Jawa Tengah 57135
+            Telp. (+62) 85865412191</p>
         </div>
-        <div class="footer-col-3">
-            <div class="informasi">
-                <h1>INFORMASI</h1>
-                <div class="content-informasi">
-                    <a href="">SLA</a>
-                    <a href="">AUP</a>
-                    <a href="">Perjanjian Layanan</a>
-                    <a href="">Privacy Policy</a>
-                    <a href="">Hosting Murah</a>
-                    <a href="../../../plasa-hosting/Pages/promo/index.html">Promo</a>
-                    <a href="../../../plasa-hosting/Pages/info-pembayaran/index.html">Info Pembayaran</a>
-                </div>
-            </div>
-            <div class="bantuan">
-                <h1>BANTUAN</h1>
-                <div class="content-bantuan">
-                    <a href="">Blog</a>
-                    <a href="">kontak</a>
-                    <a href="">Laporkan Penyalahgunaan</a>
-                    <a href="">FAQ</a>
-                </div>
-            </div>
+        <img src="../../image/support.png" class="support" alt="image-support">
+      </div>
+      <div class="footer-col-2">
+        <div class="hosting">
+          <h1>HOSTING</h1>
+          <div class="content-hosting">
+            <a href="../../../plasa-hosting/Pages/web/index.html">Web Hosting</a>
+            <a href="">Wordpress</a>
+            <a href="">VPS Hosting</a>
+            <a href="">Cloud Hosting</a>
+            <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">Hosting Murah</a>
+            <a href="../../../plasa-hosting/Pages/web/index.html">Jasa Pembuatan Website</a>
+            <a href="">Google Workspace</a>
+          </div>
+        </div>
+        <div class="perusahaan">
+          <h1>PERUSAHAAN</h1>
+          <div class="content-perusahaan">
+            <a href="../../../plasa-hosting/Pages/tentang-kami/index.html">Tentang plasahosting</a>
+            <a href="">Data Center</a>
+            <a href="">VPS Hosting</a>
+            <a href="">Term Of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-3">
+        <div class="informasi">
+          <h1>INFORMASI</h1>
+          <div class="content-informasi">
+            <a href="../../../plasa-hosting/Pages/sla/index.html">SLA</a>
+            <a href="../../../plasa-hosting/Pages/aup/index.html">AUP</a>
+            <a href="">Perjanjian Layanan</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Hosting Murah</a>
+            <a href="../../../plasa-hosting/Pages/promo/index.html">Promo</a>
+            <a href="../../../plasa-hosting/Pages/info-pembayaran/index.html">Info Pembayaran</a>
+          </div>
+        </div>
+        <div class="bantuan">
+          <h1>BANTUAN</h1>
+          <div class="content-bantuan">
+            <a href="">Blog</a>
+            <a href="">kontak</a>
+            <a href="">Laporkan Penyalahgunaan</a>
+            <a href="">FAQ</a>
+          </div>
+        </div>
 
+      </div>
+      <div class="footer-col-4">
+        <div class="domain">
+          <h1>DOMAIN</h1>
+          <div class="content-domain">
+            <a href="../../../plasa-hosting/Pages/domain/index.html">Beli Domain Murah</a>
+            <a href="">Transfer Domain</a>
+            <a href="">Reseller Domain</a>
+            <a href="../../../plasa-hosting/Pages/domain/index.html">Cari Domain</a>
+          </div>
         </div>
-        <div class="footer-col-4">
-            <div class="domain">
-                <h1>DOMAIN</h1>
-                <div class="content-domain">
-                    <a href="../../../plasa-hosting/Pages/domain/index.html">Beli Domain Murah</a>
-                    <a href="">Transfer Domain</a>
-                    <a href="">Reseller Domain</a>
-                    <a href="../../../plasa-hosting/Pages/domain/index.html">Cari Domain</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
     <div class="follow-me">
-        <h1>
-            IKUTI KAMI
-        </h1>
-        <div class="medsos">
-            <a href="">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
+      <h1>
+        IKUTI KAMI
+      </h1>
+      <div class="medsos">
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
     </div>
 
     <hr>
-    <p class="copyright">Copyright      2004 Plasa Hosting. All rights Reserved</p>
+    <p class="copyright">Copyright 2004 Plasa Hosting. All rights Reserved</p>
 
-</footer>
-<!--END FOOTER -->
+  </footer>
+  <!--END FOOTER -->
+
 
   <script src="script.js"></script>
 </body>

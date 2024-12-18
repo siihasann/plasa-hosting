@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLA</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -115,117 +116,77 @@
     </header>
     <!-- End Navbar -->
 
-    <!-- START MAIN -->
-    <div class="main-section">
-        <div class="hero-metode-pembayaran">
-            <div class="pita">
-                <img src="../../image/hero-pita.png" alt="hero-pita">
-            </div>
-            <div class="judul">
-                <h1>Metode Pembayaran</h1>
-                <p>Metode pembayaran yang kami sediakan ada berbagai
-                    macam sehingga anda tidak perlu bingung, tinggal pilih lalu Bayar </p>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Service Level Agreement <span>(SLA)</span></h1>
+            <p>
+                Di Plasa Hosting, kami berkomitmen untuk menyediakan layanan hosting dan
+                domain dengan tingkat ketersediaan, keandalan, dan performa optimal.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section SLA List and Details -->
+    <section class="sla-section">
+        <!-- List SLA (Generated dari JS) -->
+        <div class="sla-list" id="sla-list"></div>
+
+        <!-- Kotak Penjabaran -->
+        <div class="sla-detail">
+            <p id="detail-text">Klik salah satu SLA untuk melihat penjabaran lengkap.</p>
+        </div>
+    </section>
+
+    <!-- Start FAQ -->
+    <section class="faq-section">
+        <div class="faq-left">
+            <h2 class="faq-title">FAQ</h2>
+            <h3 class="faq-subtitle">(Frequently Asked Questions)</h3>
+            <p class="faq-description">Pertanyaan yang sering ditanyakan customer Plasa Hosting</p>
+            <img src="./../../image/faq-img.png" alt="FAQ Illustration" class="faq-image">
         </div>
 
-        <div class="pembayaran">
-            <div class="media-pembayaran">
-                <p>Pembayaran dapat dilakukan melalui : </p>
-                <div class="metode">
-                    <div class="metode-1">
-                        <img src="../../image/Bank BRI-logo.png" alt="">
-                        <img src="../../image/BNI-logo.png" alt="">
-                        <img src="../../image/BCA-logo.png" alt="">
-                        <img src="../../image/Bank Mandiri-logo.png" alt="">
-                        <img src="../../image/gopay-logo.png" alt="">
-                        <img src="../../image/Logo OVO-logo.png" alt="">
-                    </div>
-                    <div class="metode-1">
-                        <img src="../../image/indomaret-logo.png" alt="">
-                        <img src="../../image/alfamaret-logo.png" alt="">
-                        <img src="../../image/debit-logo.png" alt="">
-                        <img src="../../image/Bank Mandiri Syariah-logo.png" alt="">
-                        <img src="../../image/QRIS-logo.png" alt="">
-                    </div>
+        <div class="faq-right">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Bagaimana cara membeli layanan hosting dan domain di sini?
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
                 </div>
-
-            </div>
-
-            <div class="virtual-account">
-                <div class="title">
-                    <h1>Virtual Account</h1>
-                    <p>Ketika anda melakukan pembayaran menggunakan Virtual Account, anda tidak perlu melakukan
-                        konfirmasi karena setelah pembayaran anda masuk, maka order akan terproses secara otomatis oleh
-                        sistem Plasahosting.com</p>
-                </div>
-                <div class="image">
-                    <img src="../../image/virtual-account.png" alt="">
+                <div class="faq-answer">
+                    Anda dapat membeli layanan hosting dan domain melalui website kami dengan mengikuti langkah-langkah
+                    yang mudah.
                 </div>
             </div>
-        </div>
 
-        <div class="tata-cara">
-            <div class="content">
-                <h1 class="titleContent">Berikut adalah step pembayaran menggunakan Virtual Account:</h1>
-                <div class="langkah">
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>1</h1>
-                        </div>
-                        <p>Pilih pembayaran melalui Virtual Account.</p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>2</h1>
-                        </div>
-                        <p>Catat 16 digit nomor virtual account & nominal pembayaran Anda.</p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>3</h1>
-                        </div>
-                        <p>Gunakan ATM yang memiliki jaringan ATM Bersama/ Prima/ Alto untuk menyelesaikan pembayaran.
-                        </p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>4</h1>
-                        </div>
-                        <p>Masukkan PIN Anda.</p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>5</h1>
-                        </div>
-                        <p>Di menu utama pilih ‘Others’. Pilih ‘Transfer’ lalu pilih ‘other bank account’.</p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>6</h1>
-                        </div>
-                        <p>Masukkan kode bank Permata ‘013’ diikuti dengan 16 digit nomor virtual account. Masukkan
-                            nominal pembayaran lalu pilih ‘Correct’.</p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>7</h1>
-                        </div>
-                        <p>Pastikan nominal pembayaran & nomor virtual account sudah benar terisi, lalu pilih ‘Correct’.
-                        </p>
-                    </div>
-                    <div class="content-langkah">
-                        <div class="nomor">
-                            <h1>8</h1>
-                        </div>
-                        <p>Pembayaran Anda dengan Virtual Account selesai.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Bagaimana saya mengelola domain dan hosting saya?
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Kami menyediakan control panel yang mudah digunakan untuk mengelola domain dan hosting Anda.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Apakah layanan Anda mendukung keamanan website?
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    Ya, kami menyediakan berbagai fitur keamanan termasuk SSL, firewall, dan backup regular.
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <!-- END MAIN -->
+    </section>
+    <!-- END FAQ -->
 
     <!--START FOOTER -->
     <footer class="footer">
@@ -332,7 +293,12 @@
     </footer>
     <!--END FOOTER -->
 
+
+
+
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
