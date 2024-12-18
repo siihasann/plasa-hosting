@@ -1,367 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <!-- START NAVBAR -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="../../index.html">
-            <img
-              class="plasahosting"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/50ad5b2d56ebd1f9aa374dadbd9e011b97efe5638c783b81b10a9a880f2f628f?placeholderIfAbsent=true&apiKey=e5258137e78a4fc0b272fd2b3afc0b5f"
-            />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../../index.html">
+          <img class="plasahosting"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/50ad5b2d56ebd1f9aa374dadbd9e011b97efe5638c783b81b10a9a880f2f628f?placeholderIfAbsent=true&apiKey=e5258137e78a4fc0b272fd2b3afc0b5f" />
+        </a>
+      </div>
+      <div class="parent-navigation">
+        <div class="navigation">
+          <ul class="nav-links">
+            <!-- Dropdown Hosting -->
+            <li class="dropdown">
+              <a>
+                Hosting
+                <span class="dropdown-icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Hosting Murah</span>
+                      <p class="dropdown-description">Solusi hosting terjangkau untuk pemula</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-rocket"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Hosting Bisnis</span>
+                      <p class="dropdown-description">Performa tinggi untuk bisnis anda</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-star"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Hosting Premium</span>
+                      <p class="dropdown-description">Layanan hosting kelas atas</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Dropdown Domain -->
+            <li class="dropdown">
+              <a>
+                Domain
+                <span class="dropdown-icon">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../../plasa-hosting/Pages/domain/index.html">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Domain Murah</span>
+                      <p class="dropdown-description">Nama domain terjangkau</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-crown"></i>
+                    <div class="dropdown-content">
+                      <span class="dropdown-title">Transfer Domain</span>
+                      <p class="dropdown-description">Domain berkualitas tinggi</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../../../plasa-hosting/Pages/web/index.html"> Website</a></li>
+            <li><a href="#"></i> Blog</a></li>
+          </ul>
         </div>
-        <div class="parent-navigation">
-          <div class="navigation">
-            <ul class="nav-links">
-              <a href="../../../plasa-hosting/Pages/hosting-murah/index.html"
-                >Hosting</a
-              >
-              <a href="../../../plasa-hosting/Pages/domain/index.html"
-                >Domain</a
-              >
-               <a href="../../../plasa-hosting/Pages/web/index.html">Website</a>
-              <a href="#">Blog</a>
-            </ul>
-          </div>
-          <div class="login">
-            <a href="#login">
-              <div class="user-icon">
-                <i class="fa-regular fa-user"></i>
-              </div>
-            </a>
-            <div id="hamburger" class="hamburger">
-              <i class="fa-solid fa-bars" id="menu"></i>
-              <i class="fa-regular fa-circle-xmark" id="close"></i>
+        <div class="login">
+          <a href="#login">
+            <div class="user-icon">
+              <i class="fa-regular fa-user"></i>
             </div>
+          </a>
+          <div id="hamburger" class="hamburger">
+            <i class="fa-solid fa-bars" id="menu"></i>
+            <i class="fa-regular fa-circle-xmark" id="close"></i>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- END NAVBAR -->
-
-    <!-- START SECTION HERO -->
-
-    <div class="hero-section">
-      <div class="hero-text">
-        <div class="title-description">
-          <h1>Hosting Terbaik Murah dan Cepat</h1>
-          <p>
-            Layanan hosting dengan biaya murah dan performa yang dibisa
-            diandalkan diplasahosting, ayo segera lakukan transaksi !.
-          </p>
-        </div>
-        <div class="button-buy">
-          <p>Beli Sekarang</p>
-        </div>
       </div>
-      <div class="hero-image">
-        <img src="../../image/hero-hosting-murah.png" alt="hosting-murah" />
-      </div>
-    </div>
-    <!-- END SECTION HERO -->
+    </nav>
+  </header>
+  <!-- End Navbar -->
 
-    <!-- START MAIN CONTENT -->
-    <div class="main-section">
-      <div class="main-title">
-        <h1>Daftar Harga Web Hosting</h1>
+  <!-- START SECTION HERO -->
+
+  <div class="hero-section">
+    <div class="hero-text">
+      <div class="title-description">
+        <h1>Hosting Terbaik Murah dan Cepat</h1>
         <p>
-          Daftar Harga berikut merupakan paket hosting yang paling banyak
-          diminati.
+          Layanan hosting dengan biaya murah dan performa yang dibisa
+          diandalkan diplasahosting, ayo segera lakukan transaksi !.
         </p>
       </div>
-      <div class="packages">
-        <div class="card-package">
-          <div class="header-card">
-            <h3>Package-25 MB</h3>
-          </div>
-          <h4 class="price">
-            Rp. <span class="big-price">40.000</span> /tahun
-          </h4>
-          <div class="button-buy">
-            <p>Pesan Sekarang</p>
-          </div>
-          <div class="all-spesifikasi">
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>25 MB<span> space</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>2 GB<span> QoutaBandwith/bulan</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>Free<span> Setup</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card-package">
-          <div class="header-card">
-            <h3>Package-25 MB</h3>
-          </div>
-          <h4 class="price">
-            Rp. <span class="big-price">40.000</span> /tahun
-          </h4>
-          <div class="button-buy">
-            <p>Pesan Sekarang</p>
-          </div>
-          <div class="all-spesifikasi">
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>25 MB<span> space</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>2 GB<span> QoutaBandwith/bulan</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>Free<span> Setup</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card-package">
-          <div class="header-card">
-            <h3>Package-25 MB</h3>
-          </div>
-          <h4 class="price">
-            Rp. <span class="big-price">40.000</span> /tahun
-          </h4>
-          <div class="button-buy">
-            <p>Pesan Sekarang</p>
-          </div>
-          <div class="all-spesifikasi">
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>25 MB<span> space</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>2 GB<span> QoutaBandwith/bulan</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>Free<span> Setup</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card-package">
-          <div class="header-card">
-            <h3>Package-25 MB</h3>
-          </div>
-          <h4 class="price">
-            Rp. <span class="big-price">40.000</span> /tahun
-          </h4>
-          <div class="button-buy">
-            <p>Pesan Sekarang</p>
-          </div>
-          <div class="all-spesifikasi">
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>25 MB<span> space</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>2 GB<span> QoutaBandwith/bulan</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>Free<span> Setup</span></p>
-            </div>
-          </div>
-        </div>
-        <div class="card-package">
-          <div class="header-card">
-            <h3>Package-25 MB</h3>
-          </div>
-          <h4 class="price">
-            Rp. <span class="big-price">40.000</span> /tahun
-          </h4>
-          <div class="button-buy">
-            <p>Pesan Sekarang</p>
-          </div>
-          <div class="all-spesifikasi">
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>25 MB<span> space</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>2 GB<span> QoutaBandwith/bulan</span></p>
-            </div>
-            <div class="spesifikasi">
-              <i class="fa-solid fa-square-check"></i>
-              <p>Free<span> Setup</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-overlay"></div>
-      <div class="button-fitur">
-        <p>Detail Fitur</p>
-        <i id="icon-toggle" class="fa-solid fa-angle-up"></i>
-      </div>
-      <div class="modal-fitur">
-        <h1>Fitur</h1>
-        <table>
-          <tr class="">
-            <th>Package</th>
-            <th>Pkg-6MB</th>
-            <th>Pkg-10MB</th>
-            <th>Pkg-25MB</th>
-            <th>Pkg-50MB</th>
-            <th>Pkg-100MB</th>
-            <th>Pkg-200MB</th>
-            <th>Pkg-500MB</th>
-          </tr>
-          <tr class="row">
-            <td>Disk Space</td>
-            <td>6 MB</td>
-            <td>10 MB</td>
-            <td>25 MB</td>
-            <td>50 MB</td>
-            <td>100 MB</td>
-            <td>200 MB</td>
-            <td>500 MB</td>
-          </tr>
-          <tr class="row">
-            <td>Disk Space</td>
-            <td>6 MB</td>
-            <td>10 MB</td>
-            <td>25 MB</td>
-            <td>50 MB</td>
-            <td>100 MB</td>
-            <td>200 MB</td>
-            <td>500 MB</td>
-          </tr>
-        </table>
+      <div class="button-buy">
+        <p>Beli Sekarang</p>
       </div>
     </div>
-    <!-- END MAIN CONTENT -->
+    <div class="hero-image">
+      <img src="../../image/hero-hosting-murah.png" alt="hosting-murah" />
+    </div>
+  </div>
+  <!-- END SECTION HERO -->
 
-    <!--START FOOTER -->
-    <footer class="footer">
-      <div class="content-footer">
-          <div class="footer-col-1">
-              <img src="../../image/logo-plasahosting.png" alt="">
-              <div class="alamat">
-                  <h1>Surakarta</h1>
-                  <p>Jl. Letjen Sutoyo No.43
-                      Jawa Tengah 57135
-                      Telp. (+62) 85865412191</p>
-              </div>
-              <div class="alamat">
-                  <h1>Jakarta</h1>
-                  <p>Jl. Letjen Sutoyo No.43
-                      Jawa Tengah 57135
-                      Telp. (+62) 85865412191</p>
-              </div>
-              <img src="../../image/support.png" class="support" alt="image-support">
+  <!-- START MAIN CONTENT -->
+  <div class="main-section">
+    <div class="main-title">
+      <h1>Daftar Harga Web Hosting</h1>
+      <p>
+        Daftar Harga berikut merupakan paket hosting yang paling banyak
+        diminati.
+      </p>
+    </div>
+    <div class="packages">
+      <div class="card-package">
+        <div class="header-card">
+          <h3>Package-25 MB</h3>
+        </div>
+        <h4 class="price">
+          Rp. <span class="big-price">40.000</span> /tahun
+        </h4>
+        <div class="button-buy">
+          <p>Pesan Sekarang</p>
+        </div>
+        <div class="all-spesifikasi">
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>25 MB<span> space</span></p>
           </div>
-          <div class="footer-col-2">
-              <div class="hosting">
-                  <h1>HOSTING</h1>
-                  <div class="content-hosting">
-                      <a href="../../../plasa-hosting/Pages/web/index.html">Web Hosting</a>
-                      <a href="">Wordpress</a>
-                      <a href="">VPS Hosting</a>
-                      <a href="">Cloud Hosting</a>
-                      <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">Hosting Murah</a>
-                      <a href="../../../plasa-hosting/Pages/web/index.html">Jasa Pembuatan Website</a>
-                      <a href="">Google Workspace</a>
-                  </div>
-              </div>
-              <div class="perusahaan">
-                  <h1>PERUSAHAAN</h1>
-                  <div class="content-perusahaan">
-                      <a href="../../../plasa-hosting/Pages/tentang-kami/index.html">Tentang plasahosting</a>
-                      <a href="">Data Center</a>
-                      <a href="">VPS Hosting</a>
-                      <a href="">Term Of Service</a>
-                  </div>
-              </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>2 GB<span> QoutaBandwith/bulan</span></p>
           </div>
-          <div class="footer-col-3">
-              <div class="informasi">
-                  <h1>INFORMASI</h1>
-                  <div class="content-informasi">
-                      <a href="">SLA</a>
-                      <a href="">AUP</a>
-                      <a href="">Perjanjian Layanan</a>
-                      <a href="">Privacy Policy</a>
-                      <a href="">Hosting Murah</a>
-                      <a href="../../../plasa-hosting/Pages/promo/index.html">Promo</a>
-                      <a href="../../../plasa-hosting/Pages/info-pembayaran/index.html">Info Pembayaran</a>
-                  </div>
-              </div>
-              <div class="bantuan">
-                  <h1>BANTUAN</h1>
-                  <div class="content-bantuan">
-                      <a href="">Blog</a>
-                      <a href="">kontak</a>
-                      <a href="">Laporkan Penyalahgunaan</a>
-                      <a href="">FAQ</a>
-                  </div>
-              </div>
-
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>Free<span> Setup</span></p>
           </div>
-          <div class="footer-col-4">
-              <div class="domain">
-                  <h1>DOMAIN</h1>
-                  <div class="content-domain">
-                      <a href="../../../plasa-hosting/Pages/domain/index.html">Beli Domain Murah</a>
-                      <a href="">Transfer Domain</a>
-                      <a href="">Reseller Domain</a>
-                      <a href="../../../plasa-hosting/Pages/domain/index.html">Cari Domain</a>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-
-      <div class="follow-me">
-          <h1>
-              IKUTI KAMI
-          </h1>
-          <div class="medsos">
-              <a href="">
-                  <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="">
-                  <i class="fa-brands fa-facebook"></i>
-              </a>
-              <a href="">
-                  <i class="fa-brands fa-youtube"></i>
-              </a>
-              <a href="">
-                  <i class="fa-solid fa-envelope"></i>
-              </a>
+      <div class="card-package">
+        <div class="header-card">
+          <h3>Package-25 MB</h3>
+        </div>
+        <h4 class="price">
+          Rp. <span class="big-price">40.000</span> /tahun
+        </h4>
+        <div class="button-buy">
+          <p>Pesan Sekarang</p>
+        </div>
+        <div class="all-spesifikasi">
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>25 MB<span> space</span></p>
           </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>2 GB<span> QoutaBandwith/bulan</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>Free<span> Setup</span></p>
+          </div>
+        </div>
       </div>
+      <div class="card-package">
+        <div class="header-card">
+          <h3>Package-25 MB</h3>
+        </div>
+        <h4 class="price">
+          Rp. <span class="big-price">40.000</span> /tahun
+        </h4>
+        <div class="button-buy">
+          <p>Pesan Sekarang</p>
+        </div>
+        <div class="all-spesifikasi">
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>25 MB<span> space</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>2 GB<span> QoutaBandwith/bulan</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>Free<span> Setup</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-package">
+        <div class="header-card">
+          <h3>Package-25 MB</h3>
+        </div>
+        <h4 class="price">
+          Rp. <span class="big-price">40.000</span> /tahun
+        </h4>
+        <div class="button-buy">
+          <p>Pesan Sekarang</p>
+        </div>
+        <div class="all-spesifikasi">
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>25 MB<span> space</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>2 GB<span> QoutaBandwith/bulan</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>Free<span> Setup</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-package">
+        <div class="header-card">
+          <h3>Package-25 MB</h3>
+        </div>
+        <h4 class="price">
+          Rp. <span class="big-price">40.000</span> /tahun
+        </h4>
+        <div class="button-buy">
+          <p>Pesan Sekarang</p>
+        </div>
+        <div class="all-spesifikasi">
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>25 MB<span> space</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>2 GB<span> QoutaBandwith/bulan</span></p>
+          </div>
+          <div class="spesifikasi">
+            <i class="fa-solid fa-square-check"></i>
+            <p>Free<span> Setup</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+    <div class="button-fitur">
+      <p>Detail Fitur</p>
+      <i id="icon-toggle" class="fa-solid fa-angle-up"></i>
+    </div>
+    <div class="modal-fitur">
+      <h1>Fitur</h1>
+      <table>
+        <tr class="">
+          <th>Package</th>
+          <th>Pkg-6MB</th>
+          <th>Pkg-10MB</th>
+          <th>Pkg-25MB</th>
+          <th>Pkg-50MB</th>
+          <th>Pkg-100MB</th>
+          <th>Pkg-200MB</th>
+          <th>Pkg-500MB</th>
+        </tr>
+        <tr class="row">
+          <td>Disk Space</td>
+          <td>6 MB</td>
+          <td>10 MB</td>
+          <td>25 MB</td>
+          <td>50 MB</td>
+          <td>100 MB</td>
+          <td>200 MB</td>
+          <td>500 MB</td>
+        </tr>
+        <tr class="row">
+          <td>Disk Space</td>
+          <td>6 MB</td>
+          <td>10 MB</td>
+          <td>25 MB</td>
+          <td>50 MB</td>
+          <td>100 MB</td>
+          <td>200 MB</td>
+          <td>500 MB</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- END MAIN CONTENT -->
 
-      <hr>
-      <p class="copyright">Copyright      2004 Plasa Hosting. All rights Reserved</p>
+  <!--START FOOTER -->
+  <footer class="footer">
+    <div class="content-footer">
+      <div class="footer-col-1">
+        <img src="../../image/logo-plasahosting.png" alt="">
+        <div class="alamat">
+          <h1>Surakarta</h1>
+          <p>Jl. Letjen Sutoyo No.43
+            Jawa Tengah 57135
+            Telp. (+62) 85865412191</p>
+        </div>
+        <div class="alamat">
+          <h1>Jakarta</h1>
+          <p>Jl. Letjen Sutoyo No.43
+            Jawa Tengah 57135
+            Telp. (+62) 85865412191</p>
+        </div>
+        <img src="../../image/support.png" class="support" alt="image-support">
+      </div>
+      <div class="footer-col-2">
+        <div class="hosting">
+          <h1>HOSTING</h1>
+          <div class="content-hosting">
+            <a href="../../../plasa-hosting/Pages/web/index.html">Web Hosting</a>
+            <a href="">Wordpress</a>
+            <a href="">VPS Hosting</a>
+            <a href="">Cloud Hosting</a>
+            <a href="../../../plasa-hosting/Pages/hosting-murah/index.html">Hosting Murah</a>
+            <a href="../../../plasa-hosting/Pages/web/index.html">Jasa Pembuatan Website</a>
+            <a href="">Google Workspace</a>
+          </div>
+        </div>
+        <div class="perusahaan">
+          <h1>PERUSAHAAN</h1>
+          <div class="content-perusahaan">
+            <a href="../../../plasa-hosting/Pages/tentang-kami/index.html">Tentang plasahosting</a>
+            <a href="">Data Center</a>
+            <a href="">VPS Hosting</a>
+            <a href="">Term Of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col-3">
+        <div class="informasi">
+          <h1>INFORMASI</h1>
+          <div class="content-informasi">
+            <a href="../../../plasa-hosting/Pages/sla/index.html">SLA</a>
+            <a href="../../../plasa-hosting/Pages/aup/index.html">AUP</a>
+            <a href="">Perjanjian Layanan</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Hosting Murah</a>
+            <a href="../../../plasa-hosting/Pages/promo/index.html">Promo</a>
+            <a href="../../../plasa-hosting/Pages/info-pembayaran/index.html">Info Pembayaran</a>
+          </div>
+        </div>
+        <div class="bantuan">
+          <h1>BANTUAN</h1>
+          <div class="content-bantuan">
+            <a href="">Blog</a>
+            <a href="">kontak</a>
+            <a href="">Laporkan Penyalahgunaan</a>
+            <a href="">FAQ</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-col-4">
+        <div class="domain">
+          <h1>DOMAIN</h1>
+          <div class="content-domain">
+            <a href="../../../plasa-hosting/Pages/domain/index.html">Beli Domain Murah</a>
+            <a href="">Transfer Domain</a>
+            <a href="">Reseller Domain</a>
+            <a href="../../../plasa-hosting/Pages/domain/index.html">Cari Domain</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="follow-me">
+      <h1>
+        IKUTI KAMI
+      </h1>
+      <div class="medsos">
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr>
+    <p class="copyright">Copyright 2004 Plasa Hosting. All rights Reserved</p>
 
   </footer>
   <!--END FOOTER -->
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -1,40 +1,105 @@
 // START NAVBAR
-
 const navLinks = document.querySelector(".nav-links");
 const hamburger = document.querySelector("#hamburger");
+const dropdowns = document.querySelectorAll('.dropdown');
+
 document.querySelector("#hamburger").onclick = () => {
-  navLinks.classList.toggle("active");
+    navLinks.classList.toggle("active");
 
-  const logo = document.querySelector(".logo");
-  const navbar = document.querySelector(".navbar");
+    const logo = document.querySelector(".logo");
+    const navbar = document.querySelector(".navbar");
 
-  logo.classList.toggle("active");
-  navbar.classList.toggle("active");
-  hamburger.classList.toggle("active");
+    logo.classList.toggle("active");
+    navbar.classList.toggle("active");
+    hamburger.classList.toggle("active");
+
+    // Ensure active dropdown menus are visible
+    if (window.innerWidth <= 768) {
+        dropdowns.forEach(dropdown => {
+            if (dropdown.querySelector("a.active")) {
+                dropdown.classList.add("mobile-active");
+            }
+        });
+    }
 };
 
-document.addEventListener("click", function (e) {
-  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-    navLinks.classList.remove("active");
-    hamburger.classList.remove("active");
-  }
+// Mobile Dropdown Interaction
+dropdowns.forEach((dropdown) => {
+    const dropdownToggle = dropdown.querySelector('a');
+    
+    dropdownToggle.addEventListener('click', function (e) {
+        // Only activate for mobile view
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('mobile-active');
+            
+            // Close other open dropdowns
+            dropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown) {
+                    otherDropdown.classList.remove('mobile-active');
+                }
+            });
+        }
+    });
 });
 
-// CODE KETIKA ROUTE ACTIVE
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (e) {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+        
+        // Reset all dropdowns
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('mobile-active');
+        });
+    }
+});
 
-const Links = document.querySelectorAll(".nav-links a");
+// Active Route Highlighting
+const navLinksArray = document.querySelectorAll(".nav-links a"); // Rename variable to avoid conflict
+const currentRoutePath = window.location.pathname; // Rename variable to avoid conflict
 
-const currentPath = window.location.pathname;
-console.log("ini apa", currentPath)
+navLinksArray.forEach((link) => {
+    if (link.getAttribute("href") && link.getAttribute("href").includes(currentRoutePath)) {
+        link.classList.add("active");
 
-Links.forEach((link) => {
-  console.log(link.getAttribute("href"))
-  if (link.getAttribute("href").includes(currentPath)) {
-    link.classList.add("active");
-  }
+        // Ensure the parent dropdown is active for mobile
+        const parentDropdown = link.closest('.dropdown');
+        if (parentDropdown && window.innerWidth <= 768) {
+            parentDropdown.classList.add("mobile-active");
+        }
+    }
 });
 // END NAVBAR
 
+
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (e) {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+        
+        // Reset all dropdowns
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('mobile-active');
+        });
+    }
+});
+
+// Active Route Highlighting
+const Links = document.querySelectorAll(".nav-links a");
+const currentPath = window.location.pathname;
+
+Links.forEach((link) => {
+    if (link.getAttribute("href") && link.getAttribute("href").includes(currentPath)) {
+        link.classList.add("active");
+    }
+});
+// END NAVBAR
 
 // START HERO DOMAIN
 
