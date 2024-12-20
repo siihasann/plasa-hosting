@@ -61,10 +61,6 @@ Links.forEach((link) => {
 // END NAVBAR
 
 
-
-
-
-
 // HERO
 // Reset scroll ke posisi atas saat halaman dimuat
 window.onload = function () {
@@ -85,35 +81,38 @@ exploreBtn.addEventListener("click", () => {
 
 
 
-
-
-
 // Data utama yang digunakan untuk AUP
-const aupData = {
-    title: "Acceptable Use Policy (AUP)",
-    description: "Acceptable Usage Policy ini adalah kebijakan aturan penggunaan fasilitas yang tersedia dalam layanan.",
+const pLData = {
+    title: "Perjanjian Layanan",
+    description: "Ketentuan terkait perjanjian layanan",
     sections: [
         {
-            title: "Isi Website",
-            description: "Pelanggan dilarang untuk memuat isi website yang bersifat atau berhubungan dengan:",
+            title: "Penggunaan Layanan",
+            description: "Ketentuan terkait penggunaan layanan kami.",
             list: [
-                "Pornografi, perjudian, SARA, penghinaan, dan keasusilaan umum.",
-                "Hal-hal yang bersifat dapat menimbulkan perselisihan, keresahan, dan teror.",
-                "Materi yang mengandung unsur hak cipta tanpa izin.",
-                "Materi yang mengganggu semua pihak.",
-                "Ponzy, fraud, phishing, dan penipuan."
+                "Pengguna dilarang menggunakan layanan untuk aktivitas ilegal.",
+                "Kami berhak menghentikan layanan jika terjadi pelanggaran kebijakan.",
+                "Data pengguna akan diproses sesuai kebijakan privasi kami."
             ]
         },
         {
-            title: "Keamanan Jaringan",
-            description: "Pelanggan dilarang melakukan tindakan yang mengganggu keamanan layanan jaringan seperti:",
+            title: "Hak dan Kewajiban",
+            description: "Informasi tentang hak dan kewajiban pengguna serta penyedia layanan.",
             list: [
-                "Denial of Service (DoS) atau Distributed Denial of Service (DDoS).",
-                "Scanning atau hacking terhadap server.",
-                "Pengiriman spam, mail bomb, dan aktivitas sejenis lainnya.",
-                "Pemakaian resource berlebihan yang berdampak pada pengguna lain."
+                "Penyedia layanan berkewajiban menjaga ketersediaan layanan.",
+                "Pengguna bertanggung jawab atas keamanan akun mereka.",
+                "Setiap sengketa akan diselesaikan secara musyawarah."
             ]
-        }
+        },
+        {
+            title: "Pembayaran dan Refund",
+            description: "Ketentuan mengenai pembayaran dan pengembalian dana.",
+            list: [
+                "Pembayaran dilakukan sesuai metode yang tersedia.",
+                    "Pengembalian dana hanya berlaku untuk kondisi tertentu.",
+                    "Tagihan yang melewati batas waktu akan dikenakan denda."
+            ]
+        },
     ],
     agreements: [
         { name: "Perjanjian Umum", link: "general-agreement.html", icon: "fa-solid fa-file" },
@@ -134,11 +133,11 @@ function renderMainContent() {
     contentContainer.innerHTML = "";
 
     // Set judul utama
-    document.getElementById("main-title").textContent = aupData.title;
-    document.getElementById("main-description").textContent = aupData.description;
+    document.getElementById("main-title").textContent = pLData.title;
+    document.getElementById("main-description").textContent = pLData.description;
 
     // Render setiap section
-    aupData.sections.forEach(section => {
+    pLData.sections.forEach(section => {
         const sectionDiv = document.createElement("div");
         sectionDiv.classList.add("box");
 
@@ -173,7 +172,7 @@ function renderSidebar() {
     policiesList.innerHTML = "";
 
     // Render Agreements
-    aupData.agreements.forEach(agreement => {
+    pLData.agreements.forEach(agreement => {
         const listItem = document.createElement("li");
         const link = document.createElement("a");
         link.href = agreement.link;
@@ -188,7 +187,7 @@ function renderSidebar() {
     });
 
     // Render Policies
-    aupData.policies.forEach(policy => {
+    pLData.policies.forEach(policy => {
         const listItem = document.createElement("li");
         const link = document.createElement("a");
         link.href = policy.link;
@@ -208,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderMainContent();
     renderSidebar();
 });
+
 
 
 // START FAQ

@@ -60,55 +60,107 @@ Links.forEach((link) => {
 });
 // END NAVBAR
 
+// HERO
+// Reset scroll ke posisi atas saat halaman dimuat
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
+// Scroll ke section konten setelah klik tombol Explore
+const exploreBtn = document.getElementById("explore-btn");
+
+exploreBtn.addEventListener("click", () => {
+    const contentSection = document.getElementById("content");
+    window.scrollTo({
+        top: contentSection.offsetTop - 60, // Posisi tidak terlalu bawah
+        behavior: "smooth"
+    });
+});
+// HERO
+
 // START SLA
-// Data SLA dalam bentuk array of objects
 const slaData = [
     {
         title: "SLA 1 - Ketersediaan Server",
-        detail: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id delectus eos repellat omnis asperiores non natus unde similique porro! Et, voluptatibus. Dolore necessitatibus non suscipit minima quos facere in ab facilis praesentium provident minus perspiciatis, dolores voluptate tenetur nam officia numquam. Nihil nam amet quaerat nisi maiores similique doloremque beatae quam esse eveniet facilis odio labore ut eum, ratione cum voluptate harum dolorem. Non dolore numquam cum provident repudiandae dolorem placeat iste distinctio sequi dolores facilis esse nobis animi asperiores in ducimus ipsa dicta magnam, et saepe error tempora aspernatur. Soluta ullam voluptate culpa placeat eaque maiores provident quisquam eius quo cumque earum doloribus explicabo repellat vel numquam neque ut est rem deserunt ad harum nulla, accusamus voluptatibus omnis. Eum enim molestias quae labore ipsa accusamus accusantium modi laudantium? Odit expedita, dolorem dicta error possimus voluptatem, optio debitis suscipit autem iure eos officia voluptatibus doloremque, saepe delectus tempora nemo numquam fugiat! Quidem nisi nostrum cupiditate laborum praesentium soluta minus corrupti, temporibus iusto earum facere adipisci molestiae libero animi perspiciatis voluptas in neque illo itaque cum obcaecati? Aspernatur reprehenderit libero neque minima, earum excepturi quaerat ratione. Consequuntur nobis doloremque eligendi, corporis facere odio. Optio voluptatem libero vero quisquam nisi velit quod."
+        heading: "Ketersediaan Server 99.9%",
+        description: "Kami menjamin ketersediaan server dengan uptime 99.9% untuk memastikan bisnis Anda tetap berjalan lancar.",
+        features: [
+            "Monitoring server 24/7",
+            "Backup otomatis harian",
+            "Pemulihan cepat dalam 15 menit",
+            "Notifikasi status server real-time"
+        ]
     },
     {
-        title: "SLA 2 - Dukungan Pelanggan 24/7",
-        detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rem odio odit illo fugit quidem ea, cupiditate consequuntur soluta consectetur reprehenderit labore cum dolores veritatis harum eos sed suscipit facere mollitia pariatur dolore. Magnam excepturi quae illo fuga ea, nemo, aliquid nesciunt sequi omnis, sapiente eius maiores rerum laudantium totam."
+        title: "SLA 2 - Dukungan Pelanggan",
+        heading: "Dukungan Teknis 24/7",
+        description: "Tim support kami siap membantu Anda 24 jam sehari, 7 hari seminggu untuk menyelesaikan setiap masalah teknis.",
+        features: [
+            "Respon awal dalam 15 menit",
+            "Penanganan prioritas untuk masalah kritis",
+            "Dukungan multi-channel",
+            "Tim teknisi berpengalaman"
+        ]
     },
     {
         title: "SLA 3 - Keamanan Data",
-        detail: "Penjabaran lengkap untuk SLA 3: Data Anda dilindungi dengan enkripsi tingkat tinggi dan backup harian."
+        heading: "Keamanan Data Premium",
+        description: "Sistem keamanan berlapis untuk melindungi data dan aplikasi Anda dari berbagai ancaman siber.",
+        features: [
+            "Enkripsi data standar industri",
+            "Firewall canggih",
+            "Scan malware otomatis",
+            "SSL gratis untuk semua website"
+        ]
     },
     {
         title: "SLA 4 - Performa Optimal",
-        detail: "Penjabaran lengkap untuk SLA 4: Kami menjamin performa server yang cepat dengan teknologi terbaru."
-    },
-  ];
-  
-  // Ambil elemen container daftar SLA dan kotak detail
-  const slaListContainer = document.getElementById("sla-list");
-  const detailText = document.getElementById("detail-text");
-  
-  // Fungsi untuk membuat daftar SLA dari data
-  function renderSLAList() {
+        heading: "Performa Server Optimal",
+        description: "Server dengan performa tinggi untuk memberikan pengalaman terbaik bagi pengunjung website Anda.",
+        features: [
+            "Hardware kelas enterprise",
+            "Optimasi server otomatis",
+            "Load balancing canggih",
+            "Caching sistem terdistribusi"
+        ]
+    }
+];
+
+const slaListContainer = document.getElementById("sla-list");
+const detailContent = document.getElementById("detail-content");
+
+function renderSLAList() {
     slaData.forEach((sla, index) => {
-      // Buat elemen div untuk setiap SLA
-      const slaItem = document.createElement("div");
-      slaItem.classList.add("sla-item");
-      slaItem.textContent = sla.title;
-  
-      // Tambahkan event listener klik untuk menampilkan detail
-      slaItem.addEventListener("click", () => {
-        detailText.textContent = sla.detail;
-  
-        // Tambahkan efek aktif
-        document.querySelectorAll(".sla-item").forEach(item => item.classList.remove("active"));
-        slaItem.classList.add("active");
-      });
-  
-      // Tambahkan elemen ke dalam container
-      slaListContainer.appendChild(slaItem);
+        const slaItem = document.createElement("div");
+        slaItem.classList.add("sla-item");
+        slaItem.textContent = sla.title;
+
+        slaItem.addEventListener("click", () => {
+            // Update active state
+            document.querySelectorAll(".sla-item").forEach(item => 
+                item.classList.remove("active"));
+            slaItem.classList.add("active");
+
+            // Render detail content
+            detailContent.innerHTML = `
+                <div class="sla-detail-header">
+                    <h2>${sla.heading}</h2>
+                </div>
+                <p class="sla-description">${sla.description}</p>
+                <ul class="sla-features">
+                    ${sla.features.map(feature => 
+                        `<li>${feature}</li>`).join("")}
+                </ul>
+            `;
+        });
+
+        slaListContainer.appendChild(slaItem);
     });
-  }
-  
-  // Render daftar SLA saat halaman dimuat
+}
+
+// Initialize the SLA list
 renderSLAList();
+  
   
 
 // START FAQ
