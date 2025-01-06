@@ -120,8 +120,7 @@ const descWhy = document.querySelectorAll(".desc-why-plasahosting");
 const server = document.querySelectorAll(".server");
 const domainMurah = document.querySelectorAll(".domain-murah");
 const contentLayanan = document.querySelectorAll(".layanan-utama");
-const titleQuestion = document.querySelectorAll(".title-question");
-const formQuestion = document.querySelectorAll(".form");
+
 
 const observerOptions = {
   threshold: 0.1,
@@ -210,28 +209,3 @@ contentLayanan.forEach((content) => {
 });
 
 
-const questiontitle = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("bottom-in");
-    }
-  });
-}, observerOptions);
-
-titleQuestion.forEach((question) => {
-  question.classList.add("bottom-init");
-  questiontitle.observe(question);
-});
-
-const form = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("bottom-in");
-    }
-  });
-}, observerOptions);
-
-formQuestion.forEach((formpertanyaan) => {
-  formpertanyaan.classList.add("bottom-init");
-  form.observe(formpertanyaan);
-});

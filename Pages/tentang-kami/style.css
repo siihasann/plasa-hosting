@@ -931,101 +931,6 @@ body {
   text-align: start;
 }
 
-.main-section .form-question {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 60px;
-}
-
-.main-section .form-question .title-question h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #0389ff;
-}
-
-.main-section .form-question .title-question p {
-  text-align: center;
-  font-size: 16px;
-}
-
-.main-section .form-question .content-question {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-}
-
-.main-section .form-question .content-question img {
-  width: 400px;
-  height: auto;
-  animation: float 2s infinite ease-in-out;
-}
-
-.main-section .form-question .content-question .form {
-  width: 100%;
-}
-
-.main-section .form-question .content-question .form form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.main-section .form-question .content-question .form input {
-  width: 100%;
-  height: 55px;
-  border: 2px solid rgba(3, 137, 255, 0.516);
-  border-radius: 10px;
-  padding: 5px 20px;
-  outline: none;
-}
-
-.main-section .form-question .content-question .form button {
-  width: auto;
-  height: 55px;
-  background-color: #0389ff;
-  padding: 5px 20px;
-  text-align: center;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.main-section .form-question .content-question .form input::placeholder {
-  font-size: 16px;
-}
-
-.main-section .form-question .content-question .form .nama-lengkap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.main-section .form-question .content-question .form .email-telp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.main-section .form-question .content-question .form .pesan {
-  width: 100%;
-  height: 150px;
-  border: 2px solid rgba(3, 137, 255, 0.516);
-  border-radius: 10px;
-  padding: 5px 20px;
-}
-
-.main-section .form-question .content-question .form .pesan::placeholder {
-  height: auto;
-  text-align: start;
-}
 
 @media (max-width: 976px) {
   .main-section .history-plasahosting {
@@ -1116,34 +1021,6 @@ body {
     gap: 2rem;
     margin-top: 1rem;
     width: 100%;
-  }
-  .main-section .form-question {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 60px 40px;
-  }
-  
-  .main-section .form-question .title-question h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #0389ff;
-  }
-  
-  .main-section .form-question .title-question p {
-    text-align: center;
-    font-size: 14px;
-  }
-  .main-section .form-question .content-question {
-    gap: 3rem;
-  }
-  
-  .main-section .form-question .content-question img {
-    width: 300px;
-    height: auto;
-  }
-  .main-section .form-question .content-question .form input::placeholder {
-    font-size: 14px;
   }
 }
 
@@ -1363,36 +1240,6 @@ body {
     font-size: 14px;
     color: #000000;
     text-align: start;
-  }
-
-  .main-section .form-question {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 50px 30px;
-  }
-  
-  .main-section .form-question .title-question h1 {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #0389ff;
-  }
-  
-  .main-section .form-question .title-question p {
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .main-section .form-question .content-question {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  .main-section .form-question .content-question .form input::placeholder {
-    font-size: 12px;
   }
   
 }
@@ -1652,30 +1499,6 @@ body {
     font-size: 14px;
     color: #000000;
     text-align: start;
-  }
-  .main-section .form-question .title-question h1 {
-    text-align: center;
-    font-size: 1.3rem;
-    color: #0389ff;
-  }
-  
-  .main-section .form-question .title-question p {
-    text-align: center;
-    font-size: 14px;
-  }
-  .main-section .form-question .content-question img {
-    width: 200px;
-    height: auto;
-  }
-  .main-section .form-question .content-question .form input {
-    padding: 3px 10px;
-
-  }
-  .main-section .form-question .content-question .form .pesan {
-    padding: 3px 10px;
-  }
-  .main-section .form-question .content-question .form button {
-    font-size: 14px;
   }
 }
 
